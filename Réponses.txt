@@ -1,0 +1,11 @@
+P1.1/On a crée une classe vecteur comme demandé comprenant un vector<double> comme attribut en privee et 
+la plupart des méthodes en public. Les méthodes qui, soit initialise un vecteur, soit sont operatoires,
+ sont facilement accesssibles. seule la methode verifiant si la dimension du vecteur passé en argument 
+ est la même que l'attribut est en privée en efet elle est utile dans la definitions des autres méthodes 
+ mais pas pour le programeur utilisateur. 
+ 
+ P1.2/On a choisis de prendre la dimension du premier des deux opérandes, on a trouvé que c'etait le plus
+ naturel dans le code. Bien que l'on perd des infos du deuxieme vecteur, on pourra choisr lequel des deux 
+ mettre en premier ce qui donnera d'autres possibilités au codde.
+ 
+ 
