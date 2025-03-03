@@ -1,0 +1,12 @@
+#Progression
+
+#Suivi
+
+##Semaine 2 :
+
+On a travaillé tous les deux cette semaine la classe Vecteur. Nous pensions que c'est important que nous la créer ensemble, particulièrement les methodes augmente
+set_coord et affiche. On a ensuite complété cette classe avec des methodes un plus spécifiques (comme dans la consigne de la série P1), comme
+prod_scal et prod_vectoriel. Nous avions quelques doutes sur comment implémenter l'addidition de deux vecteurs de tailles différentes. On a finalement
+choisi d'opter pour la méthode où le premier des deux opérandes fixe la dimension du résultat.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
