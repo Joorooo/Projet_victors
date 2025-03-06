@@ -28,10 +28,6 @@ void Vecteur::affiche() const {
     }
 }
 
-void Vecteur::voir() const {
-    cout <<"(" ; affiche(); cout << ")";
-}
-
 bool Vecteur::compare(const Vecteur& v2) const {
     if (!dim(v2)) return false;
     const double prec = 1e-10;
