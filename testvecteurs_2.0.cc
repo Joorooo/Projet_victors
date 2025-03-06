@@ -3,43 +3,46 @@
 
 using namespace std;
 
+void voir(const Vecteur& v){
+		cout <<"(" ; v.affiche(); cout << ")";
+	}
 
 void test_addition(const Vecteur& v1, const Vecteur& v2) {
-	v1.voir(); cout << "+"; v2.voir(); cout << "="; v1.addition(v2).voir(); cout << endl;
-	v2.voir(); cout << "+"; v1.voir(); cout << "="; v2.addition(v1).voir(); cout << endl;
+	voir(v1); cout << "+"; voir(v2); cout << "="; voir(v1.addition(v2)); cout << endl;
+	voir(v2); cout << "+"; voir(v1); cout << "="; voir(v2.addition(v1)); cout << endl;
 	cout << "Testons l'addition d'un vecteur quelquonque au vecteur nul : " << endl;
 	Vecteur v_nul;
 	v_nul.augmente(0.0);
-	v1.voir(); cout << "+"; v_nul.voir(); cout << "="; v1.addition(v_nul).voir(); cout << endl;
+	voir(v1); cout << "+"; voir(v_nul); cout << "="; voir(v1.addition(v_nul)); cout << endl;
 }
 
 void test_soustraction(const Vecteur& v1, const Vecteur& v2) {
-	v1.voir(); cout << "-"; v2.voir(); cout << "="; v1.soustraction(v2).voir(); cout << endl;
-	v2.voir(); cout << "-"; v1.voir(); cout << "="; v2.soustraction(v1).voir(); cout << endl;
+	voir(v1); cout << "-"; voir(v2); cout << "="; voir(v1.soustraction(v2)); cout << endl;
+	voir(v2); cout << "-"; voir(v1); cout << "="; voir(v2.soustraction(v1)); cout << endl;
 	cout << "Testons la soustration d'un vecteur quelquonque au vecteur nul : " << endl;
 	Vecteur v_nul;
 	v_nul.augmente(0.0);
-	v1.voir(); cout << "-"; v_nul.voir(); cout << "="; v1.soustraction(v_nul).voir(); cout << endl;
+	voir(v1); cout << "-"; voir(v_nul); cout << "="; voir(v1.soustraction(v_nul)); cout << endl;
 }
 	
 void test_mult(const Vecteur& v1, double x) {
-	cout << x << "*"; v1.voir(); cout << "="; v1.mult(x).voir(); cout << endl;
+	cout << x << "*"; voir(v1); cout << "="; voir(v1.mult(x)); cout << endl;
 }
 
 void test_normes(const Vecteur& v1) {
-	cout << "||"; v1.voir(); cout << "||" << "=" ; cout << v1.norme() << endl;
-	cout << "||"; v1.voir(); cout << "||^2" << "="; cout << v1.norme2() << endl;
+	cout << "||"; voir(v1); cout << "||" << "=" ; cout << v1.norme() << endl;
+	cout << "||"; voir(v1); cout << "||^2" << "="; cout << v1.norme2() << endl;
 }
 
 void test_prod_scal(const Vecteur& v1, const Vecteur& v2) {
-	v1.voir(); cout << "*"; v2.voir(); cout << "="; cout << v1.prod_scal(v2) << endl;
+	voir(v1); cout << "*"; voir(v2); cout << "="; cout << v1.prod_scal(v2) << endl;
 }
 
 
 void test_prod_vect(const Vecteur& v1, const Vecteur& v2) {
 	try {
 		Vecteur prod = v1.prod_vect(v2);
-		v1.voir(); cout << "^"; v2.voir(); cout << "="; prod.voir(); cout << endl;
+		voir(v1); cout << "^"; voir(v2); cout << "="; voir(prod); cout << endl;
 	} catch (const invalid_argument& err) {
 		cout << "Exeption attrapée (prod_vect) : " << err.what() << endl;
 	}
@@ -49,7 +52,7 @@ void test_prod_vect(const Vecteur& v1, const Vecteur& v2) {
 void test_unitaire(const Vecteur& v1) {
     try {
         Vecteur v_unit = v1.unitaire();
-        v1.voir(); cout << " normalisé devient : "; v_unit.voir(); cout << endl;
+        voir(v1); cout << " normalisé devient : "; voir(v_unit); cout << endl;
         cout << "Nous avons bien : " << endl; 
         test_normes(v_unit);
     } catch (const runtime_error& err) {
