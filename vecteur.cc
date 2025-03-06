@@ -26,7 +26,6 @@ void Vecteur::affiche() const {
     for (auto coord : vect) {
         cout << coord << " ";
     }
-    cout << endl;
 }
 
 void Vecteur::voir() const {
