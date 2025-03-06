@@ -19,12 +19,12 @@ public:
     Vecteur addition(const Vecteur& v2) const;
     Vecteur oppose() const;
     Vecteur soustraction(const Vecteur& v2) const;
-	Vecteur mult(double x) const;
-	double prod_scal(const Vecteur& v2) const;
-	double norme2() const;
-	double norme() const;
-	Vecteur unitaire() const;
-	Vecteur prod_vect(const Vecteur& v) const;
+    Vecteur mult(double x) const;
+    double prod_scal(const Vecteur& v2) const;
+    double norme2() const;
+    double norme() const;
+    Vecteur unitaire() const;
+    Vecteur prod_vect(const Vecteur& v) const;
 
 
 };
