@@ -1,7 +1,6 @@
 CXX = g++
 CC = $(CXX)
-CXXFLAGS = -std=c++11 -I/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/include/c++/v1 -stdlib=libc++ -pedantic -Wall -Wno-gnu-include-next
-
+CXXFLAGS = -std=c++11 
 # Partie commentée : choisissez les options que vous voulez avoir
 # en décommentant la/les lignes correspondantes
 #
