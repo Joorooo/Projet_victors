@@ -4,9 +4,13 @@
 
 ##Semaine 2 :
 
-On a travaillé tous les deux cette semaine la classe Vecteur. Nous pensions que c'est important que nous la créer ensemble, particulièrement les methodes augmente
-set_coord et affiche. On a ensuite complété cette classe avec des methodes un plus spécifiques (comme dans la consigne de la série P1), comme
+On a travaillé tous les deux cette semaine la classe Vecteur. On s'est dit que c'était important d'être au clair sur les bases du code, particulièrement les methodes augmente
+set_coord et affiche. On a ensuite complété cette classe avec les autres méthodes (comme dans la consigne de la série P1), comme
 prod_scal et prod_vectoriel. Nous avions quelques doutes sur comment implémenter l'addidition de deux vecteurs de tailles différentes. On a finalement
-choisi d'opter pour la méthode où le premier des deux opérandes fixe la dimension du résultat.
+choisi d'opter pour la méthode où le premier des deux opérandes fixe la dimension du résultat. On a choisis d'utiliser des exceptions pour gérer les erreurs.
+
+##Semaine 3 : 
+
+L'un de nous s'est occupé de séparer le code en plusieurs fichier et il a rencontré des problèmes à cause d'une mise a jours mac le probleme a été réglé en séance et on a pu éxécuter le code sans trop de soucis. On a vérifier qu'il n'y a pas de probleme non plus sur les machines virtuelles. L'autre s'est occupé de compléter testvecteur afin d'avoir un bon affichage et un code clair. On a choisis d'utiliser une fonction par test de methodes.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
