@@ -8,6 +8,8 @@ P1.2/On a choisis de prendre la dimension du premier des deux opérandes, on a t
 naturel dans le code. Bien que l'on perd des infos du deuxieme vecteur, on pourra choisr lequel des deux 
 mettre en premier ce qui donnera d'autres possibilités au codde.
 
+P4.1/Non car on en a pas eu l'utilité jusqu'a présent.
+
 P4.2/
 a)Il faudrait rajouter ces éléments comme attributs par exemple(teta, phi et r)
 b)Etant donné qu'il existe déjà un constructeur prenant trois arguments double il faudrait que les types 
