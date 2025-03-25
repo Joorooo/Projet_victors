@@ -18,4 +18,8 @@ du nouveau soient différents ce qui parait peu pratique pour des angles et une 
 P4.3/On ajouté ces opérateurs:
 En interne: +=, -=, ^=(n'a pas trop de sens mais est pratique pour mettre le produit vectoriel en externe), *= ( la multiplication d'un vecteur par un scalaire), ~(qui prend la direction et le sens du vecteur, remplace unitaire), *, - (prend l'opposé) et == .Ces quatres derniers ont été mis en interne pour pouvoir accéder a l'attribut sans avoir à utiliser de methode get, bien qu'un nouveau vecteur est crée pour certains, on a fait ce choix pour simplifier le code.
 En externe: +, -, *(la multiplication par un scalaire) et <<.
+
+P6.1/On a conçu integrateur comme callse abstraite donc sans attributs et avec une methode virtuelle pure integre() que l'on pourra substituer pour specifier la méthode d'integration. On a egalement ajouté un destructeur virtuelle. 
+
+P6.2/IntegrateurEulerCromer est un un Integrateur en effet c'est une sous classe de la classe Integrateur et la methode integre de cette sous classe override l'original.
  
