@@ -8,16 +8,16 @@ class ObjetMobile {
 	
 	public:
 	  //constructeurs
-      ObjetMobile(const Vecteur& e, const Vecteur& e_prime);
+          ObjetMobile(const Vecteur& e, const Vecteur& e_prime);
 	  ObjetMobile(unsigned int dim);
 	  
 	  //méthodes
 	  virtual Vecteur evolution(double temps) = 0;
 	  virtual std::ostream& affiche(std::ostream& sortie) const;
-	  virtual Vecteur get_E() const;
-	  virtual Vecteur get_E_prime() const;
-	  virtual void set_E(const Vecteur& v);
-	  virtual void set_E_prime(const Vecteur& v);
+	  Vecteur get_E() const;
+	  Vecteur get_E_prime() const;
+	  void set_E(const Vecteur& v);
+	  void set_E_prime(const Vecteur& v);
 
 	  //destructeur
 	  virtual ~ObjetMobile();
