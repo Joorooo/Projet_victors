@@ -1,10 +1,33 @@
 #include "vecteur.h"
 #include <cmath>
+#include <string>
 
 using namespace std;
 
+//Constructeur
+
+Vecteur::Vecteur(unsigned int dimension) : vect(dimension, 0) {}
+
+Vecteur::Vecteur(double a, double b, double c) : vect({a,b,c}) {}
+
+Vecteur::Vecteur(std::initializer_list<double> liste) : vect(liste) {}
+
+
+//méthodes
+
 bool Vecteur::dim(const Vecteur& V) const {
     return vect.size() == V.vect.size();
+}
+
+int Vecteur::dim() const {return vect.size();}
+
+ostream& Vecteur::affiche(ostream& sortie) const {
+	sortie << "(";
+	for (size_t i = 0; i < dim(); ++i) {
+		sortie << vect[i] << " ";
+	}
+	sortie << ")";
+	return sortie;
 }
 
 void Vecteur::augmente(double x) {
@@ -15,67 +38,8 @@ void Vecteur::set_coord(size_t indice, double valeur) {
     if (indice < vect.size()) {
         vect[indice] = valeur;
     } else {
-        throw out_of_range("indice hors limites!");
+        cerr << "ERREUR : indice hors limites!" << endl;
     }
-}
-
-void Vecteur::affiche() const {
-    for (auto coord : vect) {
-        cout << coord << " ";
-    }
-}
-
-bool Vecteur::compare(const Vecteur& v2) const {
-    if (!dim(v2)) return false;
-    const double prec = 1e-10;
-    for (size_t coord = 0; coord < vect.size(); ++coord) {
-        if (abs(vect[coord] - v2.vect[coord]) > prec) return false;
-    }
-    return true;
-}
-
-Vecteur Vecteur::addition(const Vecteur& v2) const {
-    Vecteur somme;
-    for (size_t coord = 0; coord < vect.size(); ++coord) {
-        if (coord < v2.vect.size()) {
-            somme.augmente(vect[coord] + v2.vect[coord]);
-        } else {
-            somme.augmente(vect[coord]);
-        }
-    }
-    return somme;
-}
-
-Vecteur Vecteur::oppose() const {
-    Vecteur v2;
-    for (auto coord : vect) {
-        v2.augmente(-coord);
-    }
-    return v2;
-}
-
-Vecteur Vecteur::soustraction(const Vecteur& v2) const {
-    return addition(v2.oppose());
-}
-
-Vecteur Vecteur::mult(double x) const {
-    Vecteur v2;
-    for (auto coord : vect) {
-        v2.augmente(x * coord);
-    }
-    return v2;
-}
-
-double Vecteur::prod_scal(const Vecteur& v2) const {
-    double scal = 0;
-    for (size_t coord = 0; coord < vect.size(); ++coord) {
-        if (coord < v2.vect.size()) {
-            scal += vect[coord] * v2.vect[coord];
-        } else {
-            scal += vect[coord];
-        }
-    }
-    return scal;
 }
 
 double Vecteur::norme2() const {
@@ -90,28 +54,121 @@ double Vecteur::norme() const {
     return sqrt(norme2());
 }
 
-Vecteur Vecteur::unitaire() const {
-    Vecteur v2;
-    double module = norme();
-    if (module == 0) {
-        throw runtime_error("tentative de normalisation d'un vecteur nul!");
+//Operateur interne 
+
+Vecteur& Vecteur::operator+=(const Vecteur& v) {
+	for (size_t i(0); i < vect.size(); ++i){
+		if (i < v.vect.size()){ 
+			vect[i] += v.vect[i];
+		}
+	}
+	return *this;
+}
+
+Vecteur& Vecteur::operator-=(const Vecteur& v) {
+	for (size_t i(0); i < vect.size(); ++i){
+		if (i < v.vect.size()){ 
+			vect[i] -= v.vect[i];
+		}
+	}
+	return *this;
+}
+
+Vecteur Vecteur::operator-() { // Remplace opposé
+	if (vect.empty()) {
+		return *this;
+	}
+	Vecteur v2(vect.size());   // On construis un vecteur nul de la meme taille que l'opérande
+	for (size_t coord(0); coord < vect.size(); ++coord){
+		v2.set_coord(coord,-vect[coord]);
+	}
+
+    return v2;
+}
+
+Vecteur& Vecteur::operator^=(const Vecteur& v2) {
+	if (!dim(v2) or vect.size() != 3) {
+				cerr << "ERREUR : Le produit vectoriel est défini pour des vecteurs de trois coordonnées !" << endl;
+				return *this;
+			}
+			
+	double x(vect[0]) ; double y(vect[1]); double z(vect[2]);
+	vect[0] = y*v2.vect[2] - z*v2.vect[1];
+	vect[1] = z*v2.vect[0] - x*v2.vect[2];
+	vect[2] = x*v2.vect[1] - y*v2.vect[0];
+	return *this;
+}
+
+Vecteur& Vecteur::operator*=(double a) {
+	for (auto& coord : vect){
+		coord *= a;
+	}
+	return *this;
+}
+
+double Vecteur::operator*(const Vecteur& v) const{
+	 double scal = 0;
+    for (size_t coord = 0; coord < vect.size(); ++coord) {
+        if (coord < v.dim()) {
+            scal += vect[coord] * v.vect[coord];
+        } else {
+            scal += vect[coord];
+        }
     }
-    for (auto coord : vect) {
-        v2.augmente(coord / module);
+    return scal;
+}
+
+bool Vecteur::operator==(const Vecteur& v2) {
+    if (!dim(v2)) {return false;}
+    const double prec = 1e-10;
+    for (size_t coord = 0; coord < vect.size(); ++coord) {
+        if (abs(vect[coord] - v2.vect[coord]) > prec) return false;
+    }
+    return true;
+}
+
+Vecteur Vecteur::operator~() const{
+    Vecteur v2(vect.size());
+    if (norme() == 0) {
+        cerr << "ERREUR : tentative de normalisation d'un vecteur nul!" << endl;
+        return v2;
+    }
+    double mod = norme();
+    for (size_t i(0); i < vect.size(); ++i) {
+        v2.set_coord(i,vect[i]/mod);
     }
     return v2;
 }
 
-Vecteur Vecteur::prod_vect(const Vecteur& v) const {
-	if (vect.size() ==  3 and dim(v)){
-		Vecteur result;
-		result.augmente(vect[1]*v.vect[2] - vect[2]*v.vect[1]);
-		result.augmente(vect[2]*v.vect[0] - vect[0]*v.vect[2]);
-		result.augmente(vect[0]*v.vect[1] - vect[1]*v.vect[0]);
-		return result;
-	} else {
-		throw invalid_argument("Le produit vectoriel est défini pour des vecteurs de trois coordonnées !");
-	}
+
+//Opérateur externe
+
+const Vecteur operator+(Vecteur v1, const Vecteur& v2) { // remplace addition
+    v1 += v2;
+    return v1;
 }
 
-	
+const Vecteur operator-(Vecteur v1, const Vecteur& v2) { // Remplace soustraction
+	v1 -= v2;
+	return v1;
+}
+
+ostream& operator<<(ostream& sortie, const Vecteur& v) { // Remplace affiche
+    return v.affiche(sortie);
+}
+
+const Vecteur operator^(Vecteur v1, const Vecteur& v2) {// Remplace prod_vect
+	v1 ^= v2;
+	return v1;
+}
+
+const Vecteur operator*(Vecteur v, double a) {
+	v *= a;
+	return v;
+}
+
+const Vecteur operator*(double a, Vecteur v) {
+	return v*a;
+}
+
+
