@@ -37,7 +37,7 @@ void Vecteur::set_coord(size_t indice, double valeur) {
     if (indice < vect.size()) {
         vect[indice] = valeur;
     } else {
-        cerr << "ERREUR : indice hors limites!" << endl;
+        cerr << "-->ERREUR : indice hors limites!" << endl;
     }
 }
 
@@ -87,7 +87,7 @@ Vecteur Vecteur::operator-() { // Remplace opposé
 
 Vecteur& Vecteur::operator^=(const Vecteur& v2) {
 	if (!dim(v2) or vect.size() != 3) {
-				cerr << "ERREUR : Le produit vectoriel est défini pour des vecteurs de trois coordonnées !" << endl;
+				cerr << "-->ERREUR : Le produit vectoriel est défini pour des vecteurs de trois coordonnées !" << endl;
 				return *this;
 			}
 			
@@ -129,7 +129,7 @@ bool Vecteur::operator==(const Vecteur& v2) {
 Vecteur Vecteur::operator~() const{
     Vecteur v2(vect.size());
     if (norme() == 0) {
-        cerr << "ERREUR : tentative de normalisation d'un vecteur nul!" << endl;
+        cerr << "-->ERREUR : tentative de normalisation d'un vecteur nul!" << endl;
         return v2;
     }
     double mod = norme();
