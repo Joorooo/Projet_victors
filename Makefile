@@ -36,4 +36,4 @@ testvecteurs.o: testvecteurs.cc vecteur.h
 vecteur.o: vecteur.cc vecteur.h
 # Nettoyage des fichiers intermédiaires
 clean:
-	rm -f *.o testvecteurs testPointMateriel
+	rm -f *.o testIntegrateur1 testvecteurs testPointMateriel
