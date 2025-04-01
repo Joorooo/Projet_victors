@@ -4,10 +4,6 @@
 class Integrateur {
 	public:
 	  virtual void integre(ObjetMobile& obj, double t, double dt) = 0;  
-	  virtual ~Integrateur();
+	  virtual ~Integrateur() = default;
 };
 
-class IntegrateurEulerCromer : public Integrateur {
-	public:
-	  void integre(ObjetMobile& obj, double t, double dt) override;
-};
