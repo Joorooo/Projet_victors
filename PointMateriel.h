@@ -4,8 +4,9 @@
 #include "Contraintes.h"
 #include "ChampForces.h"
 #include "vecteur.h"
+#include "Dessinable.h"
 
-class PointMateriel : public ObjetPhysique {
+class PointMateriel : public ObjetPhysique, public Dessinable {
 	public:
 	
 	//constucteur
