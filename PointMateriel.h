@@ -15,6 +15,8 @@ class PointMateriel : public ObjetPhysique {
 	//methodes publiques 
 	double virtual E_cin() const override;
 	virtual std::ostream& affiche(std::ostream& sortie) const override;
+        void dessine_sur(SupportADessin& support) { support.dessine(*this); }
+
 };
 	
 	
