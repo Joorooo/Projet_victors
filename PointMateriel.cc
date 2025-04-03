@@ -17,3 +17,5 @@ ostream& PointMateriel::affiche(ostream& sortie) const {
 	ObjetPhysique::affiche(sortie);
 	return sortie;
 }
+
+void PointMateriel::dessine_sur(SupportADessin& support) { support.dessine(*this); }
