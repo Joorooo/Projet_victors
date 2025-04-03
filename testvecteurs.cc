@@ -65,13 +65,9 @@ void grand_test(const Vecteur& v1, const Vecteur &v2, const Vecteur &v3) {
 }
 
 int main() {
-	Vecteur v1;
-	Vecteur v2;
-	Vecteur v3;
-	
-	v1.augmente(1.0); v1.augmente(-2.0); v1.augmente(-0.1);
-	v2.augmente(2.6); v2.augmente(3.5); v2.augmente(4.1);
-	v3.augmente(9.78); v3.augmente(-7.4);
+	Vecteur v1(1.0,-2.0,-0.1);
+	Vecteur v2(2.6,3.5,4.1);
+	Vecteur v3{9.78,-7.4};
 	
 	grand_test(v1, v2, v3);
 	
