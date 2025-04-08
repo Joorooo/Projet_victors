@@ -22,6 +22,19 @@ En externe: +, -, *(la multiplication par un scalaire) et <<.
 P6.1/On a conçu integrateur comme callse abstraite donc sans attributs et avec une methode virtuelle pure integre() que l'on pourra substituer pour specifier la méthode d'integration. On a egalement ajouté un destructeur virtuelle. 
 
 P6.2/IntegrateurEulerCromer est un un Integrateur en effet c'est une sous classe de la classe Integrateur et la methode integre de cette sous classe override l'original.
+
 P7.1/ Nous avons créé une sous-classe de ChampForces, ForceUniforme qui contient comme attribut un Vecteur intensite qui représente l'intensité de champ de force uniforme. Dans cette classe, nous avons aussi redéfini la méthode force qui retourne la masse de l'ObjetPhysique en argument multipliée par l'intensité du champ de force. Nous avons aussi ajouté un constructeur et surchargé l'opérateur d'affichage << pour cette classe. La classe GravitationConstante, est, elle une sous classe de ForceUniforme; nous avons crée un constructeur par defaut pour cette classe qui initialise intensite à la valeur du Vecteur g défini la semaine dernière dans le fichier constantes.h.
 
 P7.2/ Nous avons défini la classe PointMateriel comme une sous-classe de ObjetPhysique (ObjetPhysique étant une sous-classe d'ObjetMobile). Le constructeur d'un PointMateriel est similaire à celui d'un ObjetPhysique (général). Il prend en paramètre les Vecteur e et e_prime, une référence sur un objet de type Contrainte et une sur un objet de type ChampForces, et enfin une masse, charge et dimension (de l'espace physique d'évolution de l'objet) tous de type double; il appelle le constructeur d'ObjetPhysique sur ces arguments. Nous avons aussi défini une méthode E_cin qui retourne l'énergie cinétique du PointMatériel.
+
+P8.1/Dessinne_sur est une méthode virtuelle pure. En effet on utilisera des pointeurs ou des references pour redéfinir cette méthode dans des sous classes de Dessinable. Ce qui constitue le polymorphisme.
+
+P8.2/Il faut faire attention aux copies de classes définies par des pointeurs. En effet il faut des copies profondes et pas des copies de surfaces afin de copier la reférence et l'objet sur lequel pointe le pointeur. Afin de ne pas modifier l'objet en meme temps que la reférences copiées.
+
+P8.3/attributs private: -tableau dynamique de unique_ptr d'objetphysique
+                        -tableaux dynamiques de shared_ptr de Contrainte, de                                ChampForces
+                        -le temps
+                        -un unique_ptr sur un Integrateur
+Les pointeurs sont nécessaires afin de pratiquer le polymorphisme. Les contraintes et les champforces sont partagés entre les objets d'ou les shared ptr. On a utilisé des unique_ptr pour faciliter la gestion de memoire 
+  On a juste rajouté un constructeur prenant tous les attributs mentionnés plus tot en plus d'un constructeur par défaut.
+  Des manipulateurs comme dans la consigne et une methode affiche créeant la sortie pour la surcharge de l'opérateur <<. 
