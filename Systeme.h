@@ -13,7 +13,7 @@ class Systeme {
 	  std::vector <std::unique_ptr<ObjetPhysique>> objet;   //collection hétérogène d'objet
 	  std::vector <std::shared_ptr<Contrainte>> contrainte; //collection hétérogène de contrainte
 	  std::vector <std::shared_ptr<ChampForces>> champforce;//collection hétérogène de champs de forces
-	  std::unique_ptr<Integrateur> integrateur;             //pointeure intelligent sur un integrateur
+	  std::unique_ptr<Integrateur> integrateur;             //pointeur intelligent sur un integrateur
 	  
 	public:
 	  
