@@ -7,7 +7,7 @@ class ChampNewtonien : public ForceCentrale {
 	//methode publique
 	virtual Vecteur force(const ObjetPhysique &p, double t = 0) const override;
 	virtual std::ostream& affiche(std::ostream& sortie) const override;
-	virtual std::unique_ptr<ChampForces> clone() const override;
+	virtual std::unique_ptr<ChampNewtonien> clone() const override;
 
 
 
