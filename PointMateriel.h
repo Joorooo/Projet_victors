@@ -14,7 +14,9 @@ class PointMateriel : public ObjetPhysique, public Dessinable {
 	double m, double charge = 0, double dim = 3);
 	
 	//methodes publiques 
-	virtual std::ostream& affiche(std::ostream& sortie) const override;
+	virtual std::ostream& affiche(std::ostream& sortie) const override;  
+        virtual void dessine_sur(SupportADessin& support) override;
+
 };
 	
 	
