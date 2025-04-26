@@ -12,5 +12,4 @@ class TextViewer : public SupportADessin {
 	  
 	  void dessine(PointMateriel const& a_dessiner) override;
 	  void dessine(Systeme const& a_dessiner) override;
-	  void dessine_sur(PointMateriel const& a_dessiner) override;
 };
