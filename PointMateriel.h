@@ -5,7 +5,7 @@
 #include "ChampForces.h"
 #include "vecteur.h"
 
-class PointMateriel : public ObjetPhysique {
+class PointMateriel : public ObjetPhysique, public Dessinable {
 	public:
 	
 	//constucteur
