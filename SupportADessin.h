@@ -18,7 +18,5 @@ class SupportADessin {
  
 	  virtual void dessine(PointMateriel const&) = 0;
 	  virtual void dessine(Systeme const&) = 0;
-	  virtual void dessine_sur(PointMateriel const&) = 0;
-
 
 };
