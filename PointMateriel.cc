@@ -16,3 +16,5 @@ ostream& PointMateriel::affiche(ostream& sortie) const {
 	ObjetPhysique::affiche(sortie);
 	return sortie;
 }
+virtual void PointMateriel::dessine_sur(SupportADessin& support) override
+  { support.dessine(*this); }
