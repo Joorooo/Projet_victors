@@ -1,0 +1,16 @@
+#pragma once
+#include <iostream>
+#include "SupportADessin.h"
+
+class TextViewer : public SupportADessin {
+	private:
+	  std::ostream& flot;
+	
+	public:
+	  //constructeur
+	  TextViewer(std::ostream& flot) : flot(flot) {}
+	  
+	  void dessine(PointMateriel const& a_dessiner) override;
+	  void dessine(Systeme const& a_dessiner) override;
+	  void dessine_sur(PointMateriel const& a_dessiner) override;
+};
