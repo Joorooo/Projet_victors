@@ -1,0 +1,18 @@
+#pragma once
+#include <iostream>
+#include "Contraintes.h"
+#include "vecteur.h"
+#include "ObjetPhysique.h"
+
+class ObjetPhysique;
+
+class Libre : public Contrainte {
+	public:
+	
+	//methodes publiques
+	Vecteur applique_force(const ObjetPhysique &p, const Vecteur &force, double t = 0) const;
+	Vecteur position(const ObjetPhysique &p) const;
+	Vecteur vitesse(const ObjetPhysique &p) const;
+	virtual std::ostream& affiche(std::ostream& sortie) const override;
+};
+	
