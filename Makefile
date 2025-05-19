@@ -8,7 +8,7 @@ all: exerciceP9 exerciceP9-3.1
 
 # Compilation des exécutables
 exerciceP9: exerciceP9.o Systeme.o PointMateriel.o ObjetPhysique.o ObjetMobile.o ForceCentrale.o \
-ChampNewtonien.o  ChampForces.o Vide.o Contraintes.o Libre.o IntegrateurEulerCromer.o vecteur.o constantes.h \
+ChampNewtonien.o  ChampForces.o Contraintes.o Libre.o IntegrateurEulerCromer.o vecteur.o constantes.h \
 TextViewer.o
 exerciceP9-3.1: exerciceP9-3.1.o Systeme.o PointMateriel.o ObjetPhysique.o ObjetMobile.o \
 ChampForces.o ForceUniforme.o GravitationConstante.o Contraintes.o Libre.o IntegrateurEulerCromer.o \
@@ -19,8 +19,6 @@ ChampForces.o: ChampForces.cc ChampForces.h vecteur.h ObjetPhysique.h \
  ObjetMobile.h Contraintes.h
 ChampForcesCompose.o: ChampForcesCompose.cc ChampForcesCompose.h \
  ChampForces.h vecteur.h ObjetPhysique.h ObjetMobile.h Contraintes.h
-Vide.o: Vide.cc Vide.h ChampForces.h vecteur.h ObjetPhysique.h \
- ObjetMobile.h Contraintes.h
 ForceUniforme.o: ForceUniforme.cc ForceUniforme.h ChampForces.h vecteur.h \
  ObjetPhysique.h ObjetMobile.h Contraintes.h
 GravitationConstante.o: GravitationConstante.cc GravitationConstante.h \
@@ -48,7 +46,7 @@ TextViewer.o: TextViewer.cc TextViewer.h SupportADessin.h PointMateriel.h \
  Systeme.h Integrateur.h
 exerciceP9.o: exerciceP9.cc Systeme.h ObjetPhysique.h ObjetMobile.h \
  vecteur.h Contraintes.h ChampForces.h Integrateur.h PointMateriel.h \
- Vide.h ChampNewtonien.h ForceCentrale.h Libre.h IntegrateurEulerCromer.h constantes.h \
+ ChampNewtonien.h ForceCentrale.h Libre.h IntegrateurEulerCromer.h constantes.h \
  SupportADessin.h TextViewer.h
 exerciceP9-3.1.o: exerciceP9-3.1.cc Systeme.h ObjetPhysique.h ObjetMobile.h \
  vecteur.h Contraintes.h ChampForces.h Integrateur.h PointMateriel.h ForceUniforme.h \
