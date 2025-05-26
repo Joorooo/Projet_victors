@@ -29,7 +29,6 @@ class ObjetPhysique : public ObjetMobile, public Dessinable {
 	virtual std::ostream& affiche(std::ostream& sortie) const override;
 	virtual double distance(const ObjetPhysique &autre_p) const;
 	virtual double distance2(const ObjetPhysique &autre_p) const;
-	virtual void dessine_sur(SupportADessin& support) const = 0;
 
 	//modificateurs
 	void mod_contrainte(Contrainte* cont);
