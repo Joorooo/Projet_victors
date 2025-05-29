@@ -1,54 +1,41 @@
-P1.1
-On a créé une classe Vecteur comme demandé, comprenant un tableau dynamique de doubles (vector<double>) comme attribut en privé, et les méthodes de la consigne en public. On a également rajouté une méthode getcoord(size_t) qui est un accesseur sur les coordonnées du vecteur, et une méthode dim(const Vecteur&) vérifiant si la dimension du vecteur passé en argument est la même que l'attribut vect de l'instance courante. En effet, elle est utile dans la définition des autres méthodes mais pas pour le programmeur utilisateur.
+P1.1/ On a créé une classe Vecteur comme demandé, comprenant un tableau dynamique de doubles (vector<double>) comme attribut en privé, et les méthodes de la consigne en public. On a également rajouté une méthode getcoord(size_t) qui est un accesseur sur les coordonnées du vecteur, et une méthode dim(const Vecteur&) vérifiant si la dimension du vecteur passé en argument est la même que l'attribut vect de l'instance courante. En effet, elle est utile dans la définition des autres méthodes mais pas pour le programmeur utilisateur.
 
-P1.2
-On a choisi de prendre la dimension du premier des deux opérandes. On a trouvé que c'était le plus naturel dans le code. Bien que l'on perde des infos du deuxième vecteur, on pourra choisir lequel des deux mettre en premier, ce qui donnera d'autres possibilités au code.
+P1.2/On a choisi de prendre la dimension du premier des deux opérandes. On a trouvé que c'était le plus naturel dans le code. Bien que l'on perde des infos du deuxième vecteur, on pourra choisir lequel des deux mettre en premier, ce qui donnera d'autres possibilités au code.
 
-P4.1
-Non, on n'a pas ajouté de constructeur de copie, parce que sa version par défaut est déjà présente et qu'une copie de surface est suffisante pour la classe Vecteur.
+P4.1/Non, on n'a pas ajouté de constructeur de copie, parce que sa version par défaut est déjà présente et qu'une copie de surface est suffisante pour la classe Vecteur.
 
-P4.2
+P4.2/
 a) Il faudrait rajouter ces éléments comme attributs (par exemple theta, phi et r), ou alors faire la conversion du système de coordonnées sphériques à cartésien dans la définition de ce constructeur.
 b) Étant donné qu'il existe déjà un constructeur prenant trois arguments double, cela créerait une ambiguïté avec le constructeur prenant également trois double déjà défini. Il faudrait que les types du nouveau soient différents, ce qui paraît peu pratique pour des angles et une longueur.
 
-P4.3
-On a ajouté ces opérateurs :
+P4.3/On a ajouté ces opérateurs :
 En interne : +=, -=, ^ (^= n'a pas de sens), *= (la multiplication d'un vecteur par un scalaire), ~ (qui prend la direction et le sens du vecteur, remplace unitaire), *, - (prend l'opposé) et ==. Ces quatre derniers ont été mis en interne pour pouvoir accéder à l'attribut sans avoir à utiliser de méthode get. Bien qu’un nouveau vecteur soit créé pour certains, on a fait ce choix pour simplifier le code.
 En externe : +, -, * (la multiplication par un scalaire) et <<.
 
-P6.1
-On a conçu Integrateur comme classe abstraite, donc sans attributs, et avec une méthode virtuelle pure integre() que l'on pourra substituer pour spécifier la méthode d'intégration. On a également ajouté un destructeur virtuel.
+P6.1/On a conçu Integrateur comme classe abstraite, donc sans attributs, et avec une méthode virtuelle pure integre() que l'on pourra substituer pour spécifier la méthode d'intégration. On a également ajouté un destructeur virtuel.
 
-P6.2
-IntegrateurEulerCromer est un Integrateur, en effet c'est une sous-classe de la classe Integrateur, et la méthode integre de cette sous-classe surcharge l'originale.
+P6.2/IntegrateurEulerCromer est un Integrateur, en effet c'est une sous-classe de la classe Integrateur, et la méthode integre de cette sous-classe surcharge l'originale.
 
-P7.1
-Nous avons créé une sous-classe de ChampForces, ForceUniforme, qui contient comme attribut un Vecteur intensité représentant l'intensité du champ de force uniforme. Dans cette classe, nous avons aussi redéfini la méthode force, qui retourne la masse de l'ObjetPhysique en argument multipliée par l'intensité du champ de force. Nous avons aussi ajouté un constructeur et surchargé l'opérateur d'affichage << pour cette classe.
+P7.1/Nous avons créé une sous-classe de ChampForces, ForceUniforme, qui contient comme attribut un Vecteur intensité représentant l'intensité du champ de force uniforme. Dans cette classe, nous avons aussi redéfini la méthode force, qui retourne la masse de l'ObjetPhysique en argument multipliée par l'intensité du champ de force. Nous avons aussi ajouté un constructeur et surchargé l'opérateur d'affichage << pour cette classe.
 La classe GravitationConstante est, elle, une sous-classe de ForceUniforme. Nous avons créé un constructeur par défaut pour cette classe, qui initialise intensité à la valeur du Vecteur g défini la semaine dernière dans le fichier constantes.h.
 
-P7.2
-Nous avons défini la classe PointMateriel comme une sous-classe de ObjetPhysique (ObjetPhysique étant une sous-classe de ObjetMobile). Nous avons fait hériter la classe PointMateriel de tous les constructeurs de la classe ObjetPhysique en utilisant le mot-clé using ObjetPhysique::ObjetPhysique. On a aussi redéfini la méthode affiche d’un PointMateriel pour qu'elle utilise la méthode ObjetPhysique::affiche(ostream&) et affiche en plus "PointMateriel :" au début.
+P7.2/Nous avons défini la classe PointMateriel comme une sous-classe de ObjetPhysique (ObjetPhysique étant une sous-classe de ObjetMobile). Nous avons fait hériter la classe PointMateriel de tous les constructeurs de la classe ObjetPhysique en utilisant le mot-clé using ObjetPhysique::ObjetPhysique. On a aussi redéfini la méthode affiche d’un PointMateriel pour qu'elle utilise la méthode ObjetPhysique::affiche(ostream&) et affiche en plus "PointMateriel :" au début.
 
-P8.1
-dessine_sur est une méthode virtuelle. Elle est donc substituée dans les sous-classes de Dessinable. On parlera de polymorphisme si l'on définit un pointeur ou une référence sur une classe possédant une méthode virtuelle substituée dans ses sous-classes. Dans la classe Dessinable, dessine_sur est virtuelle pure car on ne la définit pas, ce qui fait de Dessinable une classe abstraite qui ne peut être instanciée.
+P8.1/ dessine_sur est une méthode virtuelle. Elle est donc substituée dans les sous-classes de Dessinable. On parlera de polymorphisme si l'on définit un pointeur ou une référence sur une classe possédant une méthode virtuelle substituée dans ses sous-classes. Dans la classe Dessinable, dessine_sur est virtuelle pure car on ne la définit pas, ce qui fait de Dessinable une classe abstraite qui ne peut être instanciée.
 
-P8.2
-Il faut faire attention aux copies de classes définies par des pointeurs. En effet, il faudrait faire des copies profondes et pas de surface. Dans notre cas, on a préféré empêcher les copies de Système, en enlevant le constructeur de copie par défaut et l'opérateur d'affectation par défaut. Il faut aussi faire en sorte de ne pas avoir de fuites de mémoire. On s'en est assuré en redéfinissant le destructeur de la classe Système.
+P8.2/ Il faut faire attention aux copies de classes définies par des pointeurs. En effet, il faudrait faire des copies profondes et pas de surface. Dans notre cas, on a préféré empêcher les copies de Système, en enlevant le constructeur de copie par défaut et l'opérateur d'affectation par défaut. Il faut aussi faire en sorte de ne pas avoir de fuites de mémoire. On s'en est assuré en redéfinissant le destructeur de la classe Systeme.
 
-P8.3
-La classe Système possède comme attributs privés des tableaux dynamiques de pointeurs à la C sur des ObjetPhysique, des Contrainte et des ChampForces. On a donc trois collections hétérogènes : une d'objets, une de contraintes et une de champs de forces.
+P8.3/ La classe Systeme possède comme attributs privés des tableaux dynamiques de pointeurs à la C sur des ObjetPhysique, des Contrainte et des ChampForces. On a donc trois collections hétérogènes : une d'objets, une de contraintes et une de champs de forces.
 On a aussi en attribut privé un double indiquant le temps du système et un pointeur à la C sur un intégrateur.
 En public, nous avons déjà trois constructeurs : un constructeur par défaut mettant le temps à 0 et n'initialisant pas les autres attributs ; un autre prenant un temps et un pointeur à la C sur un intégrateur ; puis un dernier prenant un temps et initialisant par défaut l'intégrateur sur un IntegrateurEulerCromer.
 Nous avons ensuite, en public, toutes les méthodes demandées (manipulateurs + évolue). On a rajouté trois accesseurs : un retournant un pointeur sur un objet du tableau en attribut à un indice connu, un accesseur au temps et finalement un accesseur à la taille du tableau d'objets (comme décrit plus haut).
 On a aussi la méthode proche, qui dit si deux objets du système sont suffisamment proches (leur distance est inférieure à prec).
 Aussi, on a la méthode affiche utilisée par l'opérateur <<, la méthode dessine_sur de Dessinable que l'on substitue. Enfin, on redéfinit le destructeur virtuel hérité de Dessinable pour gérer les fuites de mémoire.
 
-P10.1
-Si l'on souhaitait dessiner un champ ou une contrainte, il faudrait que les classes ChampForce ou Contrainte héritent de Dessinable, y redéfinir dessine_sur dans ces classes, et ajouter des méthodes dessine spécifiques à chaque contrainte et à chaque force que l'on veut dessiner. On a choisi de modifier l'affichage du système pour l'exercice donné.
+P10.1/Si l'on souhaitait dessiner un champ ou une contrainte, il faudrait que les classes ChampForce ou Contrainte héritent de Dessinable, y redéfinir dessine_sur dans ces classes, et ajouter des méthodes dessine spécifiques à chaque contrainte et à chaque force que l'on veut dessiner. On a choisi de modifier l'affichage du système pour l'exercice donné.
 
-P12.1
-Les classes IntegrateurRungeKutta et IntegrateurNewmark sont toutes les deux des sous-classes de la classe Integrateur.
-Dans ces deux sous-classes, on redéfinit la méthode integre ; cette méthode va donc être utilisée de façon polymorphique dans la classe Système.
+P12.1/Les classes IntegrateurRungeKutta et IntegrateurNewmark sont toutes les deux des sous-classes de la classe Integrateur.
+Dans ces deux sous-classes, on redéfini la méthode integre ; cette méthode va donc être utilisée de façon polymorphique dans la classe Systeme.
 La classe IntegrateurNewmark possède un attribut privé epsilon (précision), utilisé dans la méthode integre redéfinie dans cette sous-classe.
-Pour changer d’intégrateur dans un exercice, il faut utiliser la méthode changer_integrateur(Integrateur*) de la classe Système.
-Pour simuler entièrement un exercice avec un autre intégrateur, il faut simplement le mettre comme argument du constructeur Système(double, Integrateur*) en créant le système au début.
+Pour changer d’intégrateur dans un exercice, il faut utiliser la méthode changer_integrateur(Integrateur*) de la classe Systeme.
+Pour simuler entièrement un exercice avec un autre intégrateur, il faut simplement le mettre comme argument du constructeur Systeme(double, Integrateur*) en créant le système au début.
