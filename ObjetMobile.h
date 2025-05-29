@@ -11,7 +11,7 @@ class ObjetMobile {
 	public:
 	
 	//constructeurs
-    ObjetMobile(const Vecteur& e, const Vecteur& e_prime);
+        ObjetMobile(const Vecteur& e, const Vecteur& e_prime);
 	ObjetMobile(unsigned int dim);
 	  
 	//méthodes publiques
@@ -30,5 +30,5 @@ class ObjetMobile {
 	virtual ~ObjetMobile() = default;          
 };
 
-//opérateur d'affichage
+//opérateur d'affichage externe
 std::ostream& operator<<(std::ostream& sortie, const ObjetMobile& obj);
