@@ -17,6 +17,7 @@ class ObjetMobile {
 	//méthodes publiques
 	virtual Vecteur evolution(double t = 0) const = 0;
 	virtual std::ostream& affiche(std::ostream& sortie) const;
+	virtual std::ostream& affiche_primaire(std::ostream& sortie) const; //retourne pour l'instant la même chose que méthode affiche
 	
 	//accesseurs
 	virtual Vecteur get_E() const;
