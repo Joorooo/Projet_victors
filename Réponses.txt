@@ -4,7 +4,7 @@ P1.2/On a choisis de prendre la dimension du premier des deux opérandes, on a t
 naturel dans le code. Bien que l'on perd des infos du deuxieme vecteur, on pourra choisr lequel des deux 
 mettre en premier ce qui donnera d'autres possibilités au code.
 
-P4.1/Non car on en a pas eu l'utilité jusqu'a présent.
+P4.1/Non on n'a pas ajouté de constructeur de copie, par ce que sa version par défaut est déjà présente et qu'une copie de surface est suffisante.
 
 P4.2/
 a)Il faudrait rajouter ces éléments comme attributs par exemple(teta, phi et r)
