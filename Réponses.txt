@@ -30,10 +30,4 @@ une classe abstraite qui ne peut être instanciée.
 
 P8.2/Il faut faire attention aux copies de classes définies par des pointeurs. En effet il faudrait faire des copies profondes et pas de surface. Dans notre cas, on a préféré empècher les copies de Système, en enlevant le constructeur de copie par défaut et l'opérateur d'affectation par défaut. Il faut aussi faire en sorte de ne pas avoir de fuites de mémoire. On s'en est assuré en redéfinissant le destructeur de la classe Systeme.
 
-P8.3/attributs private: -tableau dynamique de unique_ptr d'objetphysique
-                        -tableaux dynamiques de shared_ptr de Contrainte, de                                ChampForces
-                        -le temps
-                        -un unique_ptr sur un Integrateur
-Les pointeurs sont nécessaires afin de pratiquer le polymorphisme. Les contraintes et les champforces sont partagés entre les objets d'ou les shared ptr. On a utilisé des unique_ptr pour faciliter la gestion de memoire 
-  On a juste rajouté un constructeur prenant tous les attributs mentionnés plus tot en plus d'un constructeur par défaut.
-  Des manipulateurs comme dans la consigne et une methode affiche créeant la sortie pour la surcharge de l'opérateur <<. 
+P8.3/
