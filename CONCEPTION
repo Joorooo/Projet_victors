@@ -1,1 +1,4 @@
-
+Contraintes :
+  - Contrainte : super classe abstraite. On choisit de définir la méthode affiche(ostream&) comme virtuelle pure pour qu'elle soit défini dans les
+                 sous classes mais qu'on puisse déjà déjà définir l'opérateur d'affichage externe dans fichier Contrainte.h à partir de cette méthode.
+  
