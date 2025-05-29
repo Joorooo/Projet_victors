@@ -7,7 +7,7 @@ class ObjetPhysique; //pré-déclaration de la classe ObjetPhysique
 class Contrainte {
 	protected:
 	
-	static constexpr double limite = 1E-9; //variable de classe représentant la masse minimale que peut avoir un objet subissant une contrainte
+	static constexpr double limite = 1E-6; //variable de classe représentant la masse minimale que peut avoir un objet subissant une contrainte
 	
 	public:
 	
