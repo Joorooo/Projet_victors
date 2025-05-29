@@ -16,8 +16,8 @@ P6.1/On a conçu Integrateur comme classe abstraite, donc sans attributs, et ave
 
 P6.2/IntegrateurEulerCromer est un Integrateur, en effet c'est une sous-classe de la classe Integrateur, et la méthode integre de cette sous-classe surcharge l'originale.
 
-P7.1/Nous avons créé une sous-classe de ChampForces, ForceUniforme, qui contient comme attribut un Vecteur intensité représentant l'intensité du champ de force uniforme. Dans cette classe, nous avons aussi redéfini la méthode force, qui retourne la masse de l'ObjetPhysique en argument multipliée par l'intensité du champ de force. Nous avons aussi ajouté un constructeur et surchargé l'opérateur d'affichage << pour cette classe.
-La classe GravitationConstante est, elle, une sous-classe de ForceUniforme. Nous avons créé un constructeur par défaut pour cette classe, qui initialise intensité à la valeur du Vecteur g défini la semaine dernière dans le fichier constantes.h.
+P7.1/Nous avons créé une sous-classe de ChampForces, ForceUniforme, qui contient comme attribut un Vecteur intensité représentant l'intensité du champ de force uniforme. Nous avons crée pour cette classe un constructeur et surchargé l'opérateur d'affichage <<.
+La classe GravitationConstante est, elle, une sous-classe de ForceUniforme. Dans cette classe, nous avons aussi redéfini la méthode force, qui retourne la masse de l'ObjetPhysique en argument multipliée par l'intensité du champ de force. Nous avons créé un constructeur par défaut pour cette classe, qui initialise intensité à la valeur du Vecteur g défini la semaine dernière dans le fichier constantes.h.
 
 P7.2/Nous avons défini la classe PointMateriel comme une sous-classe de ObjetPhysique (ObjetPhysique étant une sous-classe de ObjetMobile). Nous avons fait hériter la classe PointMateriel de tous les constructeurs de la classe ObjetPhysique en utilisant le mot-clé using ObjetPhysique::ObjetPhysique. On a aussi redéfini la méthode affiche d’un PointMateriel pour qu'elle utilise la méthode ObjetPhysique::affiche(ostream&) et affiche en plus "PointMateriel :" au début.
 
