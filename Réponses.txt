@@ -7,7 +7,7 @@ mettre en premier ce qui donnera d'autres possibilités au code.
 P4.1/Non on n'a pas ajouté de constructeur de copie, par ce que sa version par défaut est déjà présente et qu'une copie de surface est suffisante pour la classe Vecteur.
 
 P4.2/
-a)Il faudrait rajouter ces éléments comme attributs par exemple(teta, phi et r)
+a)Il faudrait rajouter ces éléments comme attributs par exemple(teta, phi et r) ou alors faire la conversion du système de coordonnées sphérique à carthésien dans la définiton de ce constructeur
 b)Etant donné qu'il existe déjà un constructeur prenant trois arguments double il faudrait que les types 
 du nouveau soient différents ce qui parait peu pratique pour des angles et une longueure. 
 
