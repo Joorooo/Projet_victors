@@ -8,7 +8,7 @@ class ForceCentrale : public ChampForces {
 	protected:
 	
 	//attribut protégé
-	ObjetPhysique& pt_central; //point central 
+	ObjetPhysique& pt_central; //point central (référence)
 	
 	//méthode protégée
 	Vecteur quadratique_inverse(const ObjetPhysique &autre_p) const;
