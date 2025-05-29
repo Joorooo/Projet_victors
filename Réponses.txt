@@ -1,4 +1,4 @@
-P1.1/On a crée une classe vecteur comme demandé comprenant un tableau dynamique de double (vector<double>) comme attribut en privée et les méthodes de la consigne en public. On a également rajouté un méthode dim(const Vecteur &v), vérifiant si la dimension du vecteur passé en argument est la même que l'attribut vect de l'instance courante. En effet elle est utile dans la definitions des autres méthodes mais pas pour le programeur utilisateur. 
+P1.1/On a crée une classe vecteur comme demandé comprenant un tableau dynamique de double (vector<double>) comme attribut en privée et les méthodes de la consigne en public. On a également rajouté un méthode dim(const Vecteur &v), vérifiant si la dimension du vecteur passé en argument est la même que l'attribut vect de l'instance courante. En effet elle est utile dans la definitions des autres méthodes mais pas pour le programmeur utilisateur. 
  
 P1.2/On a choisis de prendre la dimension du premier des deux opérandes, on a trouvé que c'etait le plus
 naturel dans le code. Bien que l'on perd des infos du deuxieme vecteur, on pourra choisr lequel des deux 
