@@ -19,7 +19,7 @@ class Systeme : public Dessinable {
 	  
 	public:
 	
-	//constructeur
+	//constructeurs
 	Systeme();
 	Systeme(double t, Integrateur* integ);
 	Systeme(double t);
@@ -32,17 +32,17 @@ class Systeme : public Dessinable {
 	void ajout_contrainte_objet(size_t indice_objet, size_t indice_contrainte);
 	void ajout_champs_objet(size_t indice_objet, size_t indice_champ);
 	
-	//accesseur
+	//accesseurs
 	ObjetPhysique* get_objet(size_t indice_objet) const;
 	double get_temps() const;
 	size_t taille_objets() const;
 	
-	//méthode publique
+	//méthodes publiques
 	void evolue(double dt);
 	bool proche(size_t indice1, size_t indice2, double prec);
 	std::ostream& affiche(std::ostream& sortie) const;
-	virtual void dessine_sur(SupportADessin& support) const override
-	  { support.dessine(*this); }
+	virtual void dessine_sur(SupportADessin& support) const override { support.dessine(*this); }
+
 	//destructeur
 	virtual ~Systeme();
 	  
