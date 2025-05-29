@@ -13,10 +13,6 @@ Vecteur::Vecteur(double a, double b, double c) : vect({a,b,c})
 Vecteur::Vecteur(std::initializer_list<double> liste) : vect(liste) 
         {if (vect.empty()) augmente(0.0);}
 
-//constructeur de copie
-Vecteur::Vecteur(const Vecteur &autre_vecteur) : vect(autre_vecteur.vect) {}
-
-
 //méthodes
 bool Vecteur::dim(const Vecteur& V) const {
     return vect.size() == V.vect.size();
