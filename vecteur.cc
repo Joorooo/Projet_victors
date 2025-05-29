@@ -33,7 +33,7 @@ ostream& Vecteur::affiche(ostream& sortie) const {
 }
 
 void Vecteur::augmente(double x) {
-    vect.push_back(x);
+    vect.push_back(x); //ajoute x en bout de liste
 }
 
 void Vecteur::set_coord(size_t indice, double valeur) {
@@ -60,7 +60,7 @@ double Vecteur::getcoord(size_t indice) const
 {
    if (indice < vect.size()) return vect[indice];
    else {
-      return 0; //On choisis de retourner 0 pour identifier des vecteurs dans des espaces à dimensiosn supérieures par exemple (1) ds R par (1 0) ds R²
+      return 0; //on choisis de retourner 0 pour identifier des vecteurs dans des espaces à dimensions supérieures, par exemple (1) ds R par (1 0) dans R²
    }
 }
 
