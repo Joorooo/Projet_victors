@@ -8,7 +8,7 @@ Vecteur ChampNewtonien::force(const ObjetPhysique &p, double t) const {
 	return Constantes::G * p.get_m() * pt_central.get_m() * quadratique_inverse(p); //vecteur de la force de gravitation (Newtonienne) exercée par pt_central sur p
 }
 
-//Définition de la méthode affiche
+//définition de la méthode affiche
 ostream& ChampNewtonien::affiche(ostream& sortie) const {
 	sortie << "champ newtonien, centre : " << pt_central.get_E() << ", masse : " << pt_central.get_m();
 	return sortie;
