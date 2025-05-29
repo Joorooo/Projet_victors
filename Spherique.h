@@ -20,7 +20,7 @@ class Spherique : public Contrainte {
 	
 	//méthodes publiques
 	virtual Vecteur applique_force(const ObjetPhysique &p, const Vecteur &force, double t = 0) const override;
-	virtual Vecteur position(const ObjetPhysique &p) const override;
-	virtual Vecteur vitesse(const ObjetPhysique &p) const override;
+	virtual Vecteur position(const ObjetPhysique &p) const override; //retourne position de l'objet p dans système de coordonnées carthésiennes
+	virtual Vecteur vitesse(const ObjetPhysique &p) const override; //retourne vitesse de l'objet p dans système de coordonnées carthésiennes
 	virtual std::ostream& affiche(std::ostream& sortie) const override;
 };
