@@ -8,7 +8,7 @@ Vecteur Libre::applique_force(const ObjetPhysique &p, const Vecteur &force, doub
 		cerr << "-->ERREUR : La masse est trop petite (<=" << limite << ")" << endl;
 		return force;
 	} else {
-		return (1/p.get_m())*force; //cette contrainte ne modifie les accélérations de l'objet physique p
+		return (1/p.get_m())*force; //cette contrainte contrainte ne modifie pas le vecteur accélération de l'objet physique p
 	}
 }
 Vecteur Libre::position(const ObjetPhysique &p) const {return p.get_E();}
