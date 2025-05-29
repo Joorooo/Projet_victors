@@ -1,6 +1,5 @@
 #include "cmath"
 #include "Spherique.h"
-#include "ObjetPhysique.h"
 
 using namespace std;
 
