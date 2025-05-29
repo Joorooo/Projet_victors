@@ -5,7 +5,7 @@
 class PointMaterielAngles : public PointMateriel {
 	public:
 	
-	//constructeur
+	//utilise les contructeurs de PointMateriel
 	using PointMateriel::PointMateriel;
 	
 	//méthode publique
