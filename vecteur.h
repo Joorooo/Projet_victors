@@ -16,9 +16,6 @@ public:
     Vecteur(unsigned int dimension); //crée le vecteur nul dans espace-vectoriel de dimension dimension
     Vecteur(double a, double b, double c); //crée un vecteur dans R^3
     Vecteur(std::initializer_list<double> liste); //crée un vecteur de dimension quelconque 
-    
-    //constructeur de copie
-    Vecteur(const Vecteur &autre_vecteur);
 
     //méthodes publiques
     Vecteur() = default; // ?
