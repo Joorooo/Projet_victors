@@ -18,7 +18,7 @@ void IntegrateurNewmark::integre(ObjetMobile& obj, double t, double dt) {
 		obj.set_E_prime(p + (dt/2.0)*(r+s));
 		obj.set_E(obj.get_E() + dt*p + ((dt*dt)/3.0)*((1/2.0)*r + s));
 		condition = obj.get_E()-q;
-	} while(condition.norme() >= epsilon);
+	} while(condition.norme() >= epsilon); //cf complément mathématique
 }
 		
 	
