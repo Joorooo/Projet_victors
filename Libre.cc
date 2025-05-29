@@ -1,5 +1,4 @@
 #include "Libre.h"
-#include "ObjetPhysique.h"
 
 using namespace std;
 
