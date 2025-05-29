@@ -10,11 +10,12 @@ ObjetMobile::ObjetMobile(unsigned int dim)
 : E(dim), E_prime(dim) {}
 
 //méthodes publiques
-ostream& ObjetMobile::affiche(ostream& sortie) const {
+ostream& ObjetMobile::affiche_primaire(ostream& sortie) const {
 	sortie << E << " # paramètre" << endl;
 	sortie << E_prime << " # vitesse" << endl;
 	return sortie;
 }
+ostream& ObjetMobile::affiche(ostream& sortie) const {return affiche_primaire(sortie);}
 
 Vecteur  ObjetMobile::get_E() const {return E;}
 Vecteur ObjetMobile::get_E_prime() const {return E_prime;}
