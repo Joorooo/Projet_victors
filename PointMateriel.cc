@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//méthodes publiques
+//redéfinition de méthode affiche
 ostream& PointMateriel::affiche(ostream& sortie) const {
 	sortie << "Point Materiel : " << endl;
 	ObjetPhysique::affiche(sortie);
