@@ -45,7 +45,7 @@ void Systeme::evolue(double dt) {
 	temps += dt;
 }
 
-//méthode qui dit si deux objets sont proches
+//méthode qui dit si deux objets sont proches (c.à.d si leur distance est inférieure ou égale à prec)
 bool Systeme::proche(size_t ind1, size_t ind2, double prec) {
 	if ((ind1 >= objets.size()) or (ind2 >= objets.size())) {
 		cerr << "ERREUR, indice(s) hors limite" << endl;
