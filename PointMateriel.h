@@ -5,7 +5,7 @@
 class PointMateriel : public ObjetPhysique {
 	public:
 	
-	//utilise les contructeurs de ObjetPhysique
+	//utilise les contructeurs d'ObjetPhysique
 	using ObjetPhysique::ObjetPhysique;
 	
 	//méthodes publiques
