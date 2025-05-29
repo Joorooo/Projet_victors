@@ -26,7 +26,7 @@ Vecteur ChampForcesCompose::force(const ObjetPhysique &p, double t) const {
 	return resultat;
 }
 void ChampForcesCompose::ajout_champ(ChampForces* c) {
-	champs.push_back(c); //ajoute en bout de liste un pointeur sur un champ de force à 
+	champs.push_back(c); //ajoute en bout de liste un pointeur sur un champ de force à attribut champs
 }
 
 //redéfinition de la méthode affiche
