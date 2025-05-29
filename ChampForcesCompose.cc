@@ -1,5 +1,4 @@
 #include "ChampForcesCompose.h"
-#include "ObjetPhysique.h"
 
 using namespace std;
 
