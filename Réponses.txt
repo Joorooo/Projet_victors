@@ -11,7 +11,7 @@ a)Il faudrait rajouter ces éléments comme attributs par exemple(teta, phi et r
 b)Etant donné qu'il existe déjà un constructeur prenant trois arguments double, cela créerait un ambiguité avec le constructeur prenant également trois double déjà définit. Il faudrait que les types du nouveau soient différents, ce qui parait peu pratique pour des angles et une longueure. 
 
 P4.3/On ajouté ces opérateurs:
-En interne: +=, -=, ^=(n'a pas trop de sens mais est pratique pour mettre le produit vectoriel en externe), *= ( la multiplication d'un vecteur par un scalaire), ~(qui prend la direction et le sens du vecteur, remplace unitaire), *, - (prend l'opposé) et == .Ces quatres derniers ont été mis en interne pour pouvoir accéder a l'attribut sans avoir à utiliser de methode get, bien qu'un nouveau vecteur est crée pour certains, on a fait ce choix pour simplifier le code.
+En interne: +=, -=, ^(^= n'a pas de sens), *= ( la multiplication d'un vecteur par un scalaire), ~(qui prend la direction et le sens du vecteur, remplace unitaire), *, - (prend l'opposé) et == .Ces quatres derniers ont été mis en interne pour pouvoir accéder a l'attribut sans avoir à utiliser de methode get, bien qu'un nouveau vecteur est crée pour certains, on a fait ce choix pour simplifier le code.
 En externe: +, -, *(la multiplication par un scalaire) et <<.
 
 P6.1/On a conçu integrateur comme classe abstraite, donc sans attributs et avec une méthode virtuelle pure integre() que l'on pourra substituer pour specifier la méthode d'integration. On a egalement ajouté un destructeur virtuel. 
@@ -20,7 +20,7 @@ P6.2/IntegrateurEulerCromer est un un Integrateur, en effet c'est une sous class
 
 P7.1/ Nous avons créé une sous-classe de ChampForces, ForceUniforme qui contient comme attribut un Vecteur intensite qui représente l'intensité de champ de force uniforme. Dans cette classe, nous avons aussi redéfini la méthode force qui retourne la masse de l'ObjetPhysique en argument multipliée par l'intensité du champ de force. Nous avons aussi ajouté un constructeur et surchargé l'opérateur d'affichage << pour cette classe. La classe GravitationConstante, est elle une sous classe de ForceUniforme; nous avons crée un constructeur par defaut pour cette classe qui initialise intensite à la valeur du Vecteur g défini la semaine dernière dans le fichier constantes.h.
 
-P7.2/ Nous avons défini la classe PointMateriel comme une sous-classe de ObjetPhysique (ObjetPhysique étant une sous-classe d'ObjetMobile). Le constructeur d'un PointMateriel est similaire à celui d'un ObjetPhysique (général). Il prend en paramètre les Vecteur e et e_prime, une référence sur un objet de type Contrainte et une sur un objet de type ChampForces, et enfin une masse, charge et dimension (de l'espace physique d'évolution de l'objet) tous de type double; il appelle le constructeur d'ObjetPhysique sur ces arguments. Nous avons aussi défini une méthode E_cin qui retourne l'énergie cinétique du PointMatériel.
+P7.2/ Nous avons défini la classe PointMateriel comme une sous-classe de ObjetPhysique (ObjetPhysique étant une sous-classe d'ObjetMobile). Nous avons fait hérité la class PointMatériel de tous  Les constructeurs de la classe ObjetPhysique en utilisant le mot clé using::ObjetPhysique ObjetPhysique. On a aussi reféfi
 
 P8.1/Dessinne_sur est une méthode virtuelle pure. En effet on utilisera des pointeurs ou des references pour redéfinir cette méthode dans des sous classes de Dessinable. Ce qui constitue le polymorphisme.
 
