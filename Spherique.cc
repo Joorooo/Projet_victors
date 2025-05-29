@@ -16,10 +16,10 @@ double Spherique::get_phi_prime(const ObjetPhysique &p) const {return p.get_E_pr
 //méthodes publiques
 Vecteur Spherique::applique_force(const ObjetPhysique &p, const Vecteur &force, double t) const {
 	if (p.get_m() <= limite) {
-		cerr << "La masse ne" << endl;
+		cerr << "-->ERREUR : La masse est trop petite (<=" << limite << ")" << endl;
 		return force;
 	} else {
-		double teta = get_teta(p);
+		double teta = get_teta(p); //pour utiliser plus facilement les angles et dérivées angulaires
 		double phi = get_phi(p);
 		double teta_prime = get_teta_prime(p);
 		double phi_prime = get_phi_prime(p);
