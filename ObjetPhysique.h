@@ -6,7 +6,7 @@
 #include "Dessinable.h"
 
 class ObjetPhysique : public ObjetMobile, public Dessinable {
-	protected:
+	private:
 	
 	Contrainte* contrainte; //pointeur à la C sur une contrainte
 	ChampForces* champ_f;
