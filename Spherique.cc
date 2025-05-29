@@ -12,10 +12,11 @@ double Spherique::get_teta(const ObjetPhysique &p) const {return p.get_E().getco
 double Spherique::get_phi(const ObjetPhysique &p) const {return p.get_E().getcoord(1);}
 double Spherique::get_teta_prime(const ObjetPhysique &p) const {return p.get_E_prime().getcoord(0);}
 double Spherique::get_phi_prime(const ObjetPhysique &p) const {return p.get_E_prime().getcoord(1);}
+
 //méthodes publiques
 Vecteur Spherique::applique_force(const ObjetPhysique &p, const Vecteur &force, double t) const {
-	if (p.get_m() <= prec) {
-		cerr << "La masse ne peut pas être nulle" << endl;
+	if (p.get_m() <= limite) {
+		cerr << "La masse ne" << endl;
 		return force;
 	} else {
 		double teta = get_teta(p);
