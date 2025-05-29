@@ -1,6 +1,4 @@
-#include <iostream>
 #include "ForceUniforme.h"
-#include "ObjetPhysique.h"
 
 using namespace std;
 
