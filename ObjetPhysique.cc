@@ -27,12 +27,15 @@ double ObjetPhysique::distance2(const ObjetPhysique &autre_p) const {
 void ObjetPhysique::mod_contrainte(Contrainte* cont) {contrainte = cont;}
 void ObjetPhysique::mod_champ(ChampForces* champ) {champ_f = champ;}
 
-//redéfinition de la méthode affiche dans la sous-classe ObjetPhysique
-ostream& ObjetPhysique::affiche(ostream& sortie) const {
-	sortie << E << " # parametre" << endl;
-	sortie << E_prime << " # vitesse" << endl;
+//reféfinition des méthodes affiche et affiche_primaire dans sous-classe ObjetPhysique
+ostream& ObjetPhysique::affiche_primaire(ostream& sortie) const {
+	ObjetMobile::affiche_primaire(sortie);
 	sortie << position() << " # position physique" << endl;
 	sortie << vitesse() << " # vitesse physique" << endl;
+	return sortie;
+}
+ostream& ObjetPhysique::affiche(ostream& sortie) const {
+	affiche_primaire(sortie);
 	sortie << m << " # masse" << endl;
 	sortie << "contrainte : ";
 	if (contrainte == nullptr) {
