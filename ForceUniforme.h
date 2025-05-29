@@ -15,7 +15,4 @@ class ForceUniforme : public ChampForces {
 	
 	//méthode publique
 	virtual Vecteur force(const ObjetPhysique &p, double t = 0) const;
-	
-	//accesseur
-	Vecteur get_intensite() const;
 };
