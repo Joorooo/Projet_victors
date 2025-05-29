@@ -5,8 +5,8 @@ using namespace std;
 
 //méthodes publiques
 Vecteur Libre::applique_force(const ObjetPhysique &p, const Vecteur &force, double t) const {
-	if (p.get_m() <= prec) {
-		cerr << "La masse ne peut pas être nulle" << endl;
+	if (p.get_m() <= limite) {
+		cerr << "ERREUR--> La masse ne peut pas être nulle" << endl;
 		return force;
 	} else {
 		return (1/p.get_m())*force;
