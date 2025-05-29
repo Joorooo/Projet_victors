@@ -15,7 +15,7 @@ ObjetPhysique::ObjetPhysique(const Vecteur &e, const Vecteur &e_prime, double m,
 Vecteur ObjetPhysique::force(double t) const {return champ_f->force(*this, t);} //retourne force exercée par le champ de force sur l'objet
 Vecteur ObjetPhysique::position() const {return contrainte->position(*this);} //retourne position de l'objet dans système coordonnées carthésiennes calculée par la contrainte 
 Vecteur ObjetPhysique::vitesse() const {return contrainte->vitesse(*this);} //retourne vitesse de l'objet dans système coordonnées carthésiennes calculée par la contrainte 
-Vecteur ObjetPhysique::evolution(double t) const {return contrainte->applique_force(*this, force(t));} //retourne accélérations de l'objet subissant le champ de force sous la contrainte 
+Vecteur ObjetPhysique::evolution(double t) const {return contrainte->applique_force(*this, force(t), t);} //retourne accélérations de l'objet subissant le champ de force sous la contrainte 
 double ObjetPhysique::distance(const ObjetPhysique &autre_p) const {
 	return (position()-autre_p.position()).norme(); //calcule distance entre l'objet et autre_p
 }
