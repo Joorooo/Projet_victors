@@ -24,4 +24,4 @@ Objets :
   -ObjetPhysique : sous-classe des classes ObjetMobile et Dessinable (héritage multiple). Cette classe est abstraite par ce que la méthode dessine_sur(SupportADessin&) de la classe Dessinable n'est pas redéfini
                    dans la classe ObjetPhysique. Dans cette classe on substitut les méthode affiche_primaire(ostream&) et affiche(ostream&). La seconde est utilisé dans l'opérateur << d'un ObjetPhysique pour un affichage complet
                    tandis que la première est utilisée dans la méthode dessinne(const PointMateriel&) de la classe TextViewer.
--PointMateriel : sou
+-PointMateriel : sous-classe de la classe ObjetPhysique. Cette classe est instanciable car on y a redéfinit
