@@ -37,7 +37,7 @@ Déssinables :
 SupportADessin : super classe abstraite, car les méthodes dessine(const PointMateriel&) et dessine(const Systeme&) sont virtuelles pures dans cette classe.
 VueOPenGL et TextViewer: sous-classe de la classe SupportADessin dans lesquelles sont redéfinis les méthodes dessine(const PointMateriel&) et dessine(const Systeme&)
 
-Il y 
+Il y a aussi la classe Vecteur qui ne possède aucune sous-classe 
   
 
                 
