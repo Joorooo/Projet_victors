@@ -6,7 +6,7 @@
 class ForceUniforme : public ChampForces {
 	protected:
 	
-	Vecteur intensite; //intensité du champ
+	Vecteur intensite; //intensité du champ de force
 	
 	public:
 	
