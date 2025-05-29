@@ -4,12 +4,7 @@
  
 using namespace std;
 
-void TextViewer::dessine(PointMateriel const& a_dessiner) {
-	flot << a_dessiner.get_E() << " # parametre" << endl;
-	flot << a_dessiner.get_E_prime() << " # vitesse" << endl;
-	flot << a_dessiner.position() << " # position physique" << endl;
-	flot << a_dessiner.vitesse() << " # vitesse physique" << endl;
-}
+void TextViewer::dessine(PointMateriel const& a_dessiner) {a_dessiner.affiche_primaire(flot);}
 
 void TextViewer::dessine(Systeme const& a_dessiner) {
     flot << "Dessin du Systeme à t = " << a_dessiner.get_temps() << " : " << endl;
