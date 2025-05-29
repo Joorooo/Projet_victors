@@ -11,7 +11,7 @@ ForceUniforme::ForceUniforme(const Vecteur &intensite)
 
 //méthodes publiques
 Vecteur ForceUniforme::force(const ObjetPhysique &p, double t) const {
-	return p.get_m()*intensite;
+	return p.get_m()*intensite; //vecteur de 
 }
 
 //accesseur
