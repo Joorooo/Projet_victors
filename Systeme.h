@@ -26,11 +26,11 @@ class Systeme : public Dessinable {
 	  
 	//manipulateurs
 	void ajouter_objet(ObjetPhysique* obj); //ajoute obj à objets en bout de liste
-	void ajouter_contrainte(Contrainte* cont); //ajoute con à contraintes en bout de liste
+	void ajouter_contrainte(Contrainte* cont); //ajoute cont à contraintes en bout de liste
 	void ajouter_champ(ChampForces* champ); //ajoute champ à champsforces en bout de liste
 	void changer_integrateur(Integrateur* integ); //modifie integrateur pour qu'il pointe vers la même variable que integ
-	void ajout_contrainte_objet(size_t indice_objet, size_t indice_contrainte);
-	void ajout_champs_objet(size_t indice_objet, size_t indice_champ);
+	void ajout_contrainte_objet(size_t indice_objet, size_t indice_contrainte); //ajoute une contrainte du système à un objet du système
+	void ajout_champs_objet(size_t indice_objet, size_t indice_champ); //ajoute un champ de force du système à un objet du système
 	
 	//accesseurs
 	ObjetPhysique* get_objet(size_t indice_objet) const; //retourne le pointeur numéro indice_objet + 1 de objets
