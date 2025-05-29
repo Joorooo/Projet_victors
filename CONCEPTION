@@ -21,4 +21,7 @@ Champs de force :
 Objets :
   -ObjetMobile : super-classe abstraite, car la méthode évolue(double) est virtuelle pure dans cette classe. En effet un objet mobile n'est pas necessairement un objet qui évolue d'un manière.... Un objet mobile peu
                  par exemple représenter un ensemble de point matériels
-  -ObjetPhysique : sous-classe des classes ObjetMobile et Dessinable (voir plus loin). Cette classe est abstraite par ce que la méthode dessine_sur(SupportADessin&) 
+  -ObjetPhysique : sous-classe des classes ObjetMobile et Dessinable (héritage multiple). Cette classe est abstraite par ce que la méthode dessine_sur(SupportADessin&) de la classe Dessinable n'est pas redéfini
+                   dans la classe ObjetPhysique. Dans cette classe on substitut les méthode affiche_primaire(ostream&) et affiche(ostream&). La seconde est utilisé dans l'opérateur << d'un ObjetPhysique pour un affichage complet
+                   tandis que la première est utilisée dans la méthode dessinne(const PointMateriel&) de la classe TextViewer.
+-PointMateriel : sou
