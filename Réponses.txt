@@ -8,7 +8,7 @@ P4.1/Non on n'a pas ajouté de constructeur de copie, par ce que sa version par 
 
 P4.2/
 a)Il faudrait rajouter ces éléments comme attributs par exemple(teta, phi et r) ou alors faire la conversion du système de coordonnées sphérique à carthésien dans la définiton de ce constructeur
-b)Etant donné qu'il existe déjà un constructeur prenant trois arguments double, cela créearait un ambiguité avec le constructeur prenant également trois double déjà définit. Il faudrait que les types du nouveau soient différents, ce qui parait peu pratique pour des angles et une longueure. 
+b)Etant donné qu'il existe déjà un constructeur prenant trois arguments double, cela créerait un ambiguité avec le constructeur prenant également trois double déjà définit. Il faudrait que les types du nouveau soient différents, ce qui parait peu pratique pour des angles et une longueure. 
 
 P4.3/On ajouté ces opérateurs:
 En interne: +=, -=, ^=(n'a pas trop de sens mais est pratique pour mettre le produit vectoriel en externe), *= ( la multiplication d'un vecteur par un scalaire), ~(qui prend la direction et le sens du vecteur, remplace unitaire), *, - (prend l'opposé) et == .Ces quatres derniers ont été mis en interne pour pouvoir accéder a l'attribut sans avoir à utiliser de methode get, bien qu'un nouveau vecteur est crée pour certains, on a fait ce choix pour simplifier le code.
