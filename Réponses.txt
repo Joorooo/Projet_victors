@@ -16,7 +16,7 @@ En externe: +, -, *(la multiplication par un scalaire) et <<.
 
 P6.1/On a conçu integrateur comme classe abstraite, donc sans attributs et avec une méthode virtuelle pure integre() que l'on pourra substituer pour specifier la méthode d'integration. On a egalement ajouté un destructeur virtuel. 
 
-P6.2/IntegrateurEulerCromer est un un Integrateur, en effet c'est une sous classe de la classe Integrateur et la méthode integre de cette sous classe override l'originale.
+P6.2/IntegrateurEulerCromer est un Integrateur, en effet c'est une sous classe de la classe Integrateur et la méthode integre de cette sous classe override l'originale.
 
 P7.1/ Nous avons créé une sous-classe de ChampForces, ForceUniforme qui contient comme attribut un Vecteur intensite qui représente l'intensité de champ de force uniforme. Dans cette classe, nous avons aussi redéfini la méthode force qui retourne la masse de l'ObjetPhysique en argument multipliée par l'intensité du champ de force. Nous avons aussi ajouté un constructeur et surchargé l'opérateur d'affichage << pour cette classe. La classe GravitationConstante, est elle une sous classe de ForceUniforme; nous avons crée un constructeur par defaut pour cette classe qui initialise intensite à la valeur du Vecteur g défini la semaine dernière dans le fichier constantes.h.
 
