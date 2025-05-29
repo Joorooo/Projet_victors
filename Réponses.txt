@@ -22,10 +22,10 @@ P7.1/ Nous avons créé une sous-classe de ChampForces, ForceUniforme qui contie
 
 P7.2/ Nous avons défini la classe PointMateriel comme une sous-classe de ObjetPhysique (ObjetPhysique étant une sous-classe d'ObjetMobile). Nous avons fait hérité la clases PointMatériel de tous  les constructeurs de la classe ObjetPhysique en utilisant le mot clé using::ObjetPhysique ObjetPhysique. On a aussi reféfinit la méthode affiche d'un PointMatériel pour qu'elle utilise la méthode ObjetPhysique::affiche(ostream&) et affiche en plus "PointMateriel :" au début.
 
-P8.1/dessine_sur est une méthode virtuelle pure, dessine_sur est une méthode virtuelle. Elle 
-est donc substituée dans les sous classes de Dessinable. On parlera de polysmorphisme si l'on définit un pointeur ou une référence sur une classe possédant une méthode virtuelle substituée 
-dans ses sous classes. Dans la classes Dessinable, dessine_sur est virtuelle pure car on ne 
-la définit pas, ce qui fait de Dessinable une classe abstraite qui ne peut être instanciée.
+P8.1/dessine_sur est une méthode virtuelle. Elle est donc substituée dans les sous classes 
+de Dessinable. On parlera de polysmorphisme si l'on définit un pointeur ou une référence sur 
+une classe possédant une méthode virtuelle substituée dans ses sous classes. Dans la classes Dessinable, dessine_sur est virtuelle pure car on ne la définit pas, ce qui fait de Dessinable 
+une classe abstraite qui ne peut être instanciée.
 
 P8.2/Il faut faire attention aux copies de classes définies par des pointeurs. En effet il faut des copies profondes et pas des copies de surfaces afin de copier la reférence et l'objet sur lequel pointe le pointeur. Afin de ne pas modifier l'objet en meme temps que la reférences copiées.
 
