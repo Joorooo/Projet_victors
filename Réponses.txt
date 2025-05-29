@@ -28,7 +28,7 @@ une classe possédant une méthode virtuelle substituée dans ses sous classes. 
 Dessinable, dessine_sur est virtuelle pure car on ne la définit pas, ce qui fait de Dessinable 
 une classe abstraite qui ne peut être instanciée.
 
-P8.2/Il faut faire attention aux copies de classes définies par des pointeurs. En effet il faudrait faire des copies profondes et pas de surface. Dans notre cas, on a préféré empècher les copies de Système, en enlevant le constructeur de copie par défaut et l'opérateur d'affectation par défaut. Il faut aussi faire en sorte de ne pas avoir de fuites de mémoire. On s'en est assuré en redefinissant le destructeur de la classe Systeme.
+P8.2/Il faut faire attention aux copies de classes définies par des pointeurs. En effet il faudrait faire des copies profondes et pas de surface. Dans notre cas, on a préféré empècher les copies de Système, en enlevant le constructeur de copie par défaut et l'opérateur d'affectation par défaut. Il faut aussi faire en sorte de ne pas avoir de fuites de mémoire. On s'en est assuré en redéfinissant le destructeur de la classe Systeme.
 
 P8.3/attributs private: -tableau dynamique de unique_ptr d'objetphysique
                         -tableaux dynamiques de shared_ptr de Contrainte, de                                ChampForces
