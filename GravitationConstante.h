@@ -5,9 +5,9 @@
 class GravitationConstante : public ForceUniforme {
 	public:
 	
-	//constructeur par defaut
+	//constructeur par défaut
 	GravitationConstante();
 	
-	//methode publique
+	//méthode publique
 	virtual std::ostream& affiche(std::ostream& sortie) const override;
 };
