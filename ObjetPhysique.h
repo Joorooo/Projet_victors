@@ -29,6 +29,7 @@ class ObjetPhysique : public ObjetMobile, public Dessinable {
 	virtual double distance(const ObjetPhysique &autre_p) const;
 	virtual double distance2(const ObjetPhysique &autre_p) const; 
         virtual Vecteur evolution(double t = 0) const override;
+	virtual std:: ostream& affiche_primaire(std::ostream& sortie) const override;
 	virtual std::ostream& affiche(std::ostream& sortie) const override;
 
 	//modificateurs
