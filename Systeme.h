@@ -25,20 +25,20 @@ class Systeme : public Dessinable {
 	Systeme(double t);
 	  
 	//manipulateurs
-	void ajouter_objet(ObjetPhysique* obj);
-	void ajouter_contrainte(Contrainte* cont);
-	void ajouter_champ(ChampForces* champ);
-	void changer_integrateur(Integrateur* integ);
+	void ajouter_objet(ObjetPhysique* obj); //ajoute obj à objets en bout de liste
+	void ajouter_contrainte(Contrainte* cont); //ajoute con à contraintes en bout de liste
+	void ajouter_champ(ChampForces* champ); //ajoute champ à champsforces en bout de liste
+	void changer_integrateur(Integrateur* integ); //modifie integrateur pour qu'il pointe vers la même variable que integ
 	void ajout_contrainte_objet(size_t indice_objet, size_t indice_contrainte);
 	void ajout_champs_objet(size_t indice_objet, size_t indice_champ);
 	
 	//accesseurs
-	ObjetPhysique* get_objet(size_t indice_objet) const;
-	double get_temps() const;
-	size_t taille_objets() const;
+	ObjetPhysique* get_objet(size_t indice_objet) const; //retourne le pointeur numéro indice_objet + 1 de objets
+	double get_temps() const; //retourne le temps du système
+	size_t taille_objets() const; //retourne la taille du tableau dynamique objets sous la forme d'une variable size_t
 	
 	//méthodes publiques
-	void evolue(double dt);
+	void evolue(double dt); //fait évoluer le système d'un pas de temps dt
 	bool proche(size_t indice1, size_t indice2, double prec);
 	std::ostream& affiche(std::ostream& sortie) const;
 	virtual void dessine_sur(SupportADessin& support) const override { support.dessine(*this); }
