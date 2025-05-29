@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Contraintes.h"
+#include "ObjetPhysique.h"
 
 class Spherique : public Contrainte {
 	private:
