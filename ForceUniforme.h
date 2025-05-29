@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "ChampForces.h"
+#include "ObjetPhysique.h"
 #include "vecteur.h"
 
 class ForceUniforme : public ChampForces {
