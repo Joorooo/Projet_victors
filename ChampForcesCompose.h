@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include "ChampForces.h"
+#include "ObjetPhysique.h"
 
 class ChampForcesCompose : public ChampForces {
 	private:
