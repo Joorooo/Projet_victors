@@ -8,12 +8,12 @@ double m, double dim)
 : ObjetMobile(e, e_prime), contrainte(c), champ_f(champ_f), m(m), dim(dim)
 {}
 ObjetPhysique::ObjetPhysique(const Vecteur &e, const Vecteur &e_prime, double m, double dim)
-: ObjetPhysique(e, e_prime, nullptr, nullptr, m, dim)
+: ObjetPhysique(e, e_prime, nullptr, nullptr, m, dim) //initialise les attributs contrainte et champ_f à nullptr
 {}
 
 //méthodes publiques
-Vecteur ObjetPhysique::force(double t) const {return champ_f->force(*this, t);}
-Vecteur ObjetPhysique::position() const {return contrainte->position(*this);}
+Vecteur ObjetPhysique::force(double t) const {return champ_f->force(*this, t);} //retourne la force du champs de force (champ_f) 
+Vecteur ObjetPhysique::position() const {return contrainte->position(*this);} //retourne la position de l'objet dans système coordonnées carthésiennes calculée par la contrainte 
 Vecteur ObjetPhysique::vitesse() const {return contrainte->vitesse(*this);}
 Vecteur ObjetPhysique::evolution(double t) const {return contrainte->applique_force(*this, force(t));}
 double ObjetPhysique::distance(const ObjetPhysique &autre_p) const {
