@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Contraintes.h"
 
 //opérateur d'affichage externe
