@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include "ObjetMobile.h"
 #include "Contraintes.h"
 #include "ChampForces.h"
