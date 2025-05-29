@@ -5,7 +5,7 @@
 class Spherique : public Contrainte {
 	private:
 	
-	double r; //rayon
+	double r; //rayon de la contrainte
 	
 	//accesseurs des angles et dérivées angulaires
 	double get_teta(const ObjetPhysique &p) const;
