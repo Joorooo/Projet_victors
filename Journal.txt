@@ -65,12 +65,18 @@ sur une meme contrainte (par exemple). J'ai pensé à des copies profondes, puis
 poiteurs à la C. Ca a été très chronophage, m'a pris toute la semaine et a meme debordé sur la semaine d'après. J'ai aussi fait les
 classes SupportADessin et Dessinable et voulais les lier aux objets. J'ai pensé à l'héritage multiple mais on ne l'avais pas encore vu.
 
-Victor : 
+Ogé : 
 P9 : premières simulations. J'ai réalisé les exercices P9.1 (Le retour de la pomme) et P9-3.1 (Le corbeau et le renard). P9-3.1 ne m'a
 pas pris énormément de temps mais P9.1 a demandé un travail assez conséquent. Je n'avais pas trouvé à la fin de cette semaine, un moyen
-pour faire en sorte que la Terre subisse la force d'attraction de la pomme (c.à.d un ChampNewtonien ayant comme point central la
-pomme). J'ai finalement décidé plus tard de créer un méthode qui modifie le pointeur sur un champ de force d'un objet physique et de
-créer tout d'abord la Terre et la pomme avec aucun champ de force. 
+pour faire en sorte que la Terre subisse aussi la force d'attraction de la pomme (c.à.d un ChampNewtonien ayant comme point central la
+pomme). J'ai finalement décidé plus tard de créer un constructeur d'ObjetPhysique qui ne prenne aucun pointeur ni sur un ChampForces ni sur une Contrainte et d'initialiser les attributs correspondants dans ObjetPhysique à nullptr. Ces attributs seront modifiés par des
+méthodes spécifiques (demandées) de la classe Systeme ultérieurement.
+
+##Semaine 9 (vacances) :
+Ogé : J'ai modifié la classe Système, nottament rajouté un accesseur get_E(size_t) qui est utile dans les exercices où interviennent des
+ForceCentrale. Finalé les exercices P9.1 et P9-3.1.
+
+
 
 
 
