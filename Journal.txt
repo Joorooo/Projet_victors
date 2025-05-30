@@ -88,16 +88,34 @@ On s'est reparti le travail pour le reste du projet. Grosjean fera la partie gra
 intégrateurs.
 
 ##Semaine 10 :
+Ogé :
 P11 pendule sphérique. J'ai crée les classes Spherique et PointMaterielAngles. L'élaboration de ces classes a été assez longue. J'ai
 passé du temps à comprendre le rôle de la contrainte Sphérique et à écrire sa méthode applique_force; le complément mathématique m'a
 beaucoup aidé. Globalement, le travail était assez conséquent.
 
 ##Semaine 11 :
+Ogé :
 P12, autres intégrateurs. J'ai crée les classes IntegrateurNewmark et IntegrateurRungeKutta. Le complément mathématique était nécessaire pour ces exercices. La réalisation d'IntegrateurRungeKutta était un peu plus longue que celle pour Newmark mais notre
 IntegrateurNewmark n'est pas parfait. Je ne peux en utilisant cet intégrateur qu'obtenir des résultats en utilisant une précision et un pas de temps (dt dans les exercices) très petit (de l'ordre de 1E-7). Je pense que cela est du à la condition d'arrêt de la boucle
 do while dans la méthode integre de cet integrateur.
 
 ##Semaine 12 :
+Ogé :
+J'avais déjà fait deux autres intégrateurs (IntegrateurNewmark et IntegrateurRungeKutta) à la semaine 11.
+Nous n'avons pas fait d'autre extensions.
+
+#Semaine 13 :
+Ogé :
+Corriger quelques erreurs dans les codes, finir/compléter annotations des codes.
+Adaptation des tests (testVecteur, testSysteme, etc..) à la structure de classe et aux classes globalement que nous avons créer depuis.
+Cela était très chronophage. En effet, il fallait aussi se replonger dans le travail des semaines passées et corriger des erreurs ou modifier entièrement des parties de code. J'ai continué à faire ce travail en semaine 14.
+
+#Semaine 14 :
+Grosjean, Ogé :
+Finalisation du projet. Élaboration des fichier Conception et Readmee. On a aussi complété le fichier Reponses avec les connaissances
+que nous avons accummulé tout au long du semestre. Certaintes questions on du être modifiées pour qu'elles soient en accord avec ce
+que nous avons programmé.
+
 
 
 
