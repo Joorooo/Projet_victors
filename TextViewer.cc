@@ -4,6 +4,7 @@
  
 using namespace std;
 
+//définition des méthodes dessine sur un PointMateriel et un Systeme
 void TextViewer::dessine(PointMateriel const& a_dessiner) {a_dessiner.affiche_primaire(flot);}
 
 void TextViewer::dessine(Systeme const& a_dessiner) {
