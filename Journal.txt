@@ -4,7 +4,7 @@
 
 ##Semaine 2 :
 
-On a travaillé tous les deux cette semaine la classe Vecteur. On s'est dit que c'était important d'être au clair sur les bases du code, particulièrement les methodes augmente
+On a travaillé tous les deux cette semaine la classe Vecteur. On s'est dit que c'était important d'être au clair sur les bases du code, particulièrement les méthodes augmente
 set_coord et affiche. On a ensuite complété cette classe avec les autres méthodes (comme dans la consigne de la série P1), comme
 prod_scal et prod_vectoriel. Nous avions quelques doutes sur comment implémenter l'addidition de deux vecteurs de tailles différentes. On a finalement
 choisi d'opter pour la méthode où le premier des deux opérandes fixe la dimension du résultat. On a choisis d'utiliser des exceptions pour gérer les erreurs.
