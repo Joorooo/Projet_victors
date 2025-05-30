@@ -97,6 +97,9 @@ P12, autres intégrateurs. J'ai crée les classes IntegrateurNewmark et Integrat
 IntegrateurNewmark n'est pas parfait. Je ne peux en utilisant cet intégrateur qu'obtenir des résultats en utilisant une précision et un pas de temps (dt dans les exercices) très petit (de l'ordre de 1E-7). Je pense que cela est du à la condition d'arrêt de la boucle
 do while dans la méthode integre de cet integrateur.
 
+##Semaine 12 :
+
+
 
 
 
