@@ -4,7 +4,7 @@
 class IntegrateurNewmark : public Integrateur {
 	private:
 	
-	double epsilon; //précision
+	double epsilon; //précision, utilisée dans le méthode integre
 	
 	public:
 	
