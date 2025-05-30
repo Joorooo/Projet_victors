@@ -95,7 +95,8 @@ beaucoup aidé. Globalement, le travail était assez conséquent.
 
 ##Semaine 11 :
 Ogé :
-P12, autres intégrateurs. J'ai crée les classes IntegrateurNewmark et IntegrateurRungeKutta. Le complément mathématique était nécessaire pour ces exercices. La réalisation d'IntegrateurRungeKutta était un peu plus longue que celle pour Newmark mais notre
+P12, autres intégrateurs. J'ai crée les classes IntegrateurNewmark et IntegrateurRungeKutta. Le complément mathématique était
+nécessaire pour ces exercices. La réalisation d'IntegrateurRungeKutta était un peu plus longue que celle pour Newmark mais notre
 IntegrateurNewmark n'est pas parfait. Je ne peux en utilisant cet intégrateur qu'obtenir des résultats en utilisant une précision et
 un pas de temps (dt dans les exercices) très petit (de l'ordre de 1E-7). Je pense que cela est du à la condition d'arrêt de la boucle
 do while dans la méthode integre de cet integrateur.
