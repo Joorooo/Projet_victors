@@ -48,7 +48,8 @@ Grosjean, Ogé :
 On a discuté sur comment on voyait la classe ObjetMobile et l'héritage dans le projet.
 
 Grosjean :
-P6, création de la classe ObjetMobile, interpretation de la méthode evolution. Création des classes Integrateur et IntegrateurEulerCromer, puis testIntegrateur1 et visualisation avec gnuplot.
+P6, création de la classe ObjetMobile, interpretation de la méthode evolution. Création des classes Integrateur et
+IntegrateurEulerCromer, puis testIntegrateur1 et visualisation avec gnuplot.
 Semaine assez légère pour moi, mais compliquée dans la conception. 
 
 Ogé :
