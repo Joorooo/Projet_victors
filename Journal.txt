@@ -2,15 +2,45 @@
 
 #Suivi
 
-##Semaine 2 :
+##Semaine 1 :
+Grosjean, Ogé : 
+Lecture du descriptif du projet et complément mathématique
+Mise en place de l'environnement de travail : Github pour l'échange fichiers; utilisation des VM pour la programmation
 
-On a travaillé tous les deux cette semaine la classe Vecteur. On s'est dit que c'était important d'être au clair sur les bases du code, particulièrement les méthodes augmente
-set_coord et affiche. On a ensuite complété cette classe avec les autres méthodes (comme dans la consigne de la série P1), comme
-prod_scal et prod_vectoriel. Nous avions quelques doutes sur comment implémenter l'addidition de deux vecteurs de tailles différentes. On a finalement
-choisi d'opter pour la méthode où le premier des deux opérandes fixe la dimension du résultat. On a choisis d'utiliser des exceptions pour gérer les erreurs.
+##Semaine 2 :
+Grosjean, Ogé : 
+Dévellopement de la classe Vecteur
+Nous avions quelques doutes sur comment implémenter l'addidition de deux vecteurs de tailles différentes. On a finalement
+choisi d'opter pour la convention où le premier des deux opérandes fixe la dimension du résultat.
+Quand cela semble pertinent, on affiche des messages d'erreur (cerr). On a préféré gérer les erreurs localement au lieu de recourir à des  exceptions. On a ressenti le besoin de s'organiser pour la suite, car la charge de travail sera plus lourde par la suite.
+
+Grosjean 
+Suite à une mauvaise compréhension de la consigne, j'ai voulu prendre en main les Makefile à ce moment là. J'ai donc fait la semaine 3 en avance. C'était compliqué étant donné que je n'avais pas les instructions.
 
 ##Semaine 3 : 
+Grosjean :
+Reprise de la modularisation du code.
 
-L'un de nous s'est occupé de séparer le code en plusieurs fichier et il a rencontré des problèmes à cause d'une mise a jours mac le probleme a été réglé en séance et on a pu éxécuter le code sans trop de soucis. On a vérifier qu'il n'y a pas de probleme non plus sur les machines virtuelles. L'autre s'est occupé de compléter testvecteur afin d'avoir un bon affichage et un code clair. On a choisis d'utiliser une fonction par test de methodes.
+Ogé :
+Reprise de testVecteur.
+
+Semaine assez légère au niveau du travail.
+
+##Semaine 4 :
+Grosjean :
+P4, addaptation de la classe Vecteur aux constructeurs et à la surcharge des opérateurs. Notamment l'opérateur << qui appelle une nouvelle méthode affiche modifiant un flot passé en argument. J'ai hésité avec le méthode to_string mais l'affichage n'était pas bon.
+
+Ogé :
+P5, création des classes PointMateriel et GravitationConstante. J'avais des doutes sur ma facon d'utiliser la constante g dans la classe GravitationConstante. J'ai finalement opté pour créer un fichier constantes.h et appeler g dans la classe GravitationConstante.
+Reprise de testVecteur.
+
+Semaine assez dure.
+
+##Semaine 5 :
+Pas de nouvelles consignes.
+
+##Semaine 6 :
+
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
