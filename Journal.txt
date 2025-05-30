@@ -12,7 +12,8 @@ Grosjean, Ogé :
 Dévellopement de la classe Vecteur
 Nous avions quelques doutes sur comment implémenter l'addidition de deux vecteurs de tailles différentes. On a finalement
 choisi d'opter pour la convention où le premier des deux opérandes fixe la dimension du résultat.
-Quand cela semble pertinent, on affiche des messages d'erreur (cerr). On a préféré gérer les erreurs localement au lieu de recourir à des  exceptions. On a ressenti le besoin de s'organiser pour la suite, car la charge de travail sera plus lourde par la suite.
+Quand cela semble pertinent, on affiche des messages d'erreur (cerr). On a préféré gérer les erreurs localement au lieu de recourir à
+des  exceptions. On a ressenti le besoin de s'organiser pour la suite, car la charge de travail sera plus lourde par la suite.
 
 Grosjean 
 Suite à une mauvaise compréhension de la consigne, j'ai voulu prendre en main les Makefile à ce moment là. J'ai donc fait la semaine 3
