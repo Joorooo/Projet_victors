@@ -58,9 +58,11 @@ Cela n'a pas été évident et globalement la charge de travail pour P7 était �
 
 ##Semaine 7 :
 Grosjean :
-P8, création de la classe Systeme. Je voyais d'abord la classe Systeme avec des tableau d'unique-ptr pour les collections hétérogènes d'objets, de contraintes et de champs de forces mais je me suis rendu compte après que plusieurs objets pouvaient avec des pointeurs sur une meme contrainte (par exemple). J'ai pensé à des copies profondes, puis après à des shared_ptr pour finalement chosir des
-poiteurs à la C. Ca a été très chronophage, m'a pris toute la semaine et a meme debordé sur la semaine d'après. J'ai aussi fait les classes SupportADessin et Dessinable et
-voulais les lier aux objets. J'ai pensé à l'héritage multiple mais on ne l'avais pas encore vu.
+P8, création de la classe Systeme. Je voyais d'abord la classe Systeme avec des tableau d'unique-ptr pour les collections hétérogènes
+d'objets, de contraintes et de champs de forces mais je me suis rendu compte après que plusieurs objets pouvaient avec des pointeurs
+sur une meme contrainte (par exemple). J'ai pensé à des copies profondes, puis après à des shared_ptr pour finalement chosir des
+poiteurs à la C. Ca a été très chronophage, m'a pris toute la semaine et a meme debordé sur la semaine d'après. J'ai aussi fait les
+classes SupportADessin et Dessinable et voulais les lier aux objets. J'ai pensé à l'héritage multiple mais on ne l'avais pas encore vu.
 
 Victor : 
 P9 : premières simulations. J'ai réalisé les exercices P9.1 (Le retour de la pomme) et P9-3.1 (Le corbeau et le renard). P9-3.1 ne m'a
