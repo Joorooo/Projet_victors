@@ -110,7 +110,8 @@ Nous n'avons pas fait d'autre extensions.
 Ogé :
 Corriger quelques erreurs dans les codes, finir/compléter annotations des codes.
 Adaptation des tests (testVecteur, testSysteme, etc..) à la structure de classe et aux classes globalement que nous avons créer depuis.
-Cela était très chronophage. En effet, il fallait aussi se replonger dans le travail des semaines passées et corriger des erreurs ou modifier entièrement des parties de code. J'ai continué à faire ce travail en semaine 14.
+Cela était très chronophage. En effet, il fallait aussi se replonger dans le travail des semaines passées et corriger des erreurs ou
+modifier entièrement des parties de code. J'ai continué à faire ce travail en semaine 14.
 
 #Semaine 14 :
 Grosjean, Ogé :
