@@ -88,7 +88,7 @@ On s'est reparti le travail pour le reste du projet. Grosjean fera la partie gra
 intégrateurs.
 
 ##Semaine 10 :
-P11 pendule sphérique. J'ai crée les classes Spherique et PointMaterielAngles. L'élaboration de ces classes a été assez longue. J'ai passée du temps à comprendre le rôle de la contrainte Sphérique et à écrire sa méthode applique_force; le complément mathématique a
+P11 pendule sphérique. J'ai crée les classes Spherique et PointMaterielAngles. L'élaboration de ces classes a été assez longue. J'ai passé du temps à comprendre le rôle de la contrainte Sphérique et à écrire sa méthode applique_force; le complément mathématique m'a
 beaucoup aidé. Globalement, le travail était assez conséquent.
 
 
