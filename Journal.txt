@@ -28,7 +28,8 @@ Semaine assez légère au niveau du travail.
 
 ##Semaine 4 :
 Grosjean :
-P4, addaptation de la classe Vecteur aux constructeurs et à la surcharge des opérateurs. Notamment l'opérateur << qui appelle une nouvelle méthode affiche modifiant un flot passé en argument. J'ai hésité avec le méthode to_string mais l'affichage n'était pas bon.
+P4, addaptation de la classe Vecteur aux constructeurs et à la surcharge des opérateurs. Notamment l'opérateur << qui appelle une
+nouvelle méthode affiche modifiant un flot passé en argument. J'ai hésité avec le méthode to_string mais l'affichage n'était pas bon.
 
 Ogé :
 P5, création des classes PointMateriel et GravitationConstante. J'avais des doutes sur ma facon d'utiliser la constante g dans la
