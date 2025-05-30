@@ -44,6 +44,26 @@ Semaine assez dure.
 Pas de nouvelles consignes.
 
 ##Semaine 6 :
+Grosjean, Ogé :
+On a discuté sur comment on voyait la classe ObjetMobile et l'héritage dans le projet.
+
+Grosjean :
+P6, création de la classe ObjetMobile, interpretation de la méthode evolution. Création des classes Integrateur et IntegrateurEulerCromer, puis testIntegrateur1 et visualisation avec gnuplot.
+Semaine assez légère pour moi, mais compliquée dans la conception. 
+
+Ogé :
+P7, création des classes ObjetPhysique, Contrainte, Libre, ChampForces, ForceUniforme, ForceCentrale et ChampNewtonien. J'ai revisité
+les classes PointMatériel et GravitationConstante pour qu'elles s'insèrent dans la structure des classes. Création de tesPomme
+Cela n'a pas été évident et globalement la charge de travail pour P7 était élevée.
+
+##Semaine 7 :
+Grosjean :
+P8, création de la classe Systeme. Je voyais d'abord la classe Systeme avec des tableau d'unique-ptr pour les collections hétérogènes d'objets, de contraintes et de champs de forces mais je me suis rendu compte après que plusieurs objets pouvaient avec des pointeurs sur une meme contrainte (par exemple). J'ai pensé à des copies profondes, puis après à des shared_ptr pour finalement chosir des
+poiteurs à la C. Ca a été très chronophage, m'a pris toute la semaine et a meme debordé sur la semaine d'après. J'ai aussi fait les classes SupportADessin et Dessinable et
+voulais les lier aux objets. J'ai pensé à l'héritage multiple mais on ne l'avais pas encore vu.
+
+Victor : 
+P9 : premières simulations
 
 
 
