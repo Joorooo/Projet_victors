@@ -33,6 +33,9 @@ Déssinables :
                 ObjetMobile n'est ainsi donc pas nécessairement déssinable.
   -Systeme : sous-classe de la classe Dessinable. Un système physique doit être déssinable, il doit pouvoir être simulé/affiché graphiquement et avoir un affichage text.
 
+Integrateurs :
+  -Integrateur : super-classe des classes IntegrateurRungeKutta et IntegrateurNewmark. Cette classe est abstraite, car la méthode integre(ObjetMobile&, double , double) est abstraite.
+  -IntegrateurRungeKutta et IntegrateurNewmark: sous-classes d'Integrateur dans lequelles on défini la méthode integre.
 
 SupportADessin : super classe abstraite, car les méthodes dessine(const PointMateriel&) et dessine(const Systeme&) sont virtuelles pures dans cette classe.
 VueOPenGL et TextViewer: sous-classes de la classe SupportADessin dans lesquelles sont redéfinis les méthodes dessine(const PointMateriel&) et dessine(const Systeme&)
