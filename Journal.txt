@@ -66,16 +66,33 @@ poiteurs à la C. Ca a été très chronophage, m'a pris toute la semaine et a m
 classes SupportADessin et Dessinable et voulais les lier aux objets. J'ai pensé à l'héritage multiple mais on ne l'avais pas encore vu.
 
 Ogé : 
-P9 : premières simulations. J'ai réalisé les exercices P9.1 (Le retour de la pomme) et P9-3.1 (Le corbeau et le renard). P9-3.1 ne m'a
+P9, premières simulations. J'ai réalisé les exercices P9.1 (Le retour de la pomme) et P9-3.1 (Le corbeau et le renard). P9-3.1 ne m'a
 pas pris énormément de temps mais P9.1 a demandé un travail assez conséquent. Je n'avais pas trouvé à la fin de cette semaine, un moyen
 pour faire en sorte que la Terre subisse aussi la force d'attraction de la pomme (c.à.d un ChampNewtonien ayant comme point central la
 pomme). J'ai finalement décidé plus tard de créer un constructeur d'ObjetPhysique qui ne prenne aucun pointeur ni sur un ChampForces ni
 sur une Contrainte et d'initialiser les attributs correspondants dans ObjetPhysique à nullptr. Ces attributs seront modifiés par des
 méthodes spécifiques (demandées) de la classe Systeme ultérieurement.
 
-##Semaine 9 (vacances) :
-Ogé : J'ai modifié la classe Système, nottament rajouté un accesseur get_E(size_t) qui est utile dans les exercices où interviennent des
-ForceCentrale. Finalé les exercices P9.1 et P9-3.1.
+#Semaine 8
+Grosjean :
+
+##Semaine 9 (vacances de Pâques) :
+Ogé : 
+J'ai modifié la classe Système, nottament rajouté un accesseur get_E(size_t) qui est utile dans les exercices où interviennent des
+ForceCentrale. Finalisé les exercices P9.1 et P9-3.1. J'ai aussi crée les classes ContrainteComposee et ChampForceCompose, car je
+pensais que ca allait m'être utile pour le reste du projet. Nous (Grosjean + Ogé)avons plus tard décidé d'abandonner notre idée de
+faire une ContrainteComposee, car son implementation paraissait difficile et pas forcément necessaire.
+
+Grosjean et Ogé :
+On s'est reparti le travail pour le reste du projet. Grosjean fera la partie graphisme et Ogé les simulations plus complexes et autres
+intégrateurs.
+
+##Semaine 10 :
+P11 pendule sphérique. J'ai crée les classes Spherique et PointMaterielAngles. L'élaboration de ces classes a été assez longue. J'ai passée du temps à comprendre le rôle de la contrainte Sphérique et à écrire sa méthode applique_force; le complément mathématique a
+beaucoup aidé. Globalement, le travail était assez conséquent.
+
+
+
 
 
 
