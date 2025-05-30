@@ -15,7 +15,8 @@ choisi d'opter pour la convention où le premier des deux opérandes fixe la dim
 Quand cela semble pertinent, on affiche des messages d'erreur (cerr). On a préféré gérer les erreurs localement au lieu de recourir à des  exceptions. On a ressenti le besoin de s'organiser pour la suite, car la charge de travail sera plus lourde par la suite.
 
 Grosjean 
-Suite à une mauvaise compréhension de la consigne, j'ai voulu prendre en main les Makefile à ce moment là. J'ai donc fait la semaine 3 en avance. C'était compliqué étant donné que je n'avais pas les instructions.
+Suite à une mauvaise compréhension de la consigne, j'ai voulu prendre en main les Makefile à ce moment là. J'ai donc fait la semaine 3
+en avance. C'était compliqué étant donné que je n'avais pas les instructions.
 
 ##Semaine 3 : 
 Grosjean :
